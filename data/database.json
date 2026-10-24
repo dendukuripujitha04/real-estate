@@ -43,10 +43,26 @@
     "philosophy": "Listen Better — Plan Better — Build Better"
   },
   "stats": [
-    { "value": "20+", "label": "Years Experience", "subtext": "Excellence Since 2004" },
-    { "value": "350+", "label": "Projects Delivered", "subtext": "Residential & Commercial" },
-    { "value": "15 Yrs", "label": "Structural Warranty", "subtext": "Engineered For Generations" },
-    { "value": "100%", "label": "Transparent Pricing", "subtext": "Zero Hidden Costs" }
+    {
+      "value": "20+",
+      "label": "Years Experience",
+      "subtext": "Excellence Since 2004"
+    },
+    {
+      "value": "350+",
+      "label": "Projects Delivered",
+      "subtext": "Residential & Commercial"
+    },
+    {
+      "value": "15 Yrs",
+      "label": "Structural Warranty",
+      "subtext": "Engineered For Generations"
+    },
+    {
+      "value": "100%",
+      "label": "Transparent Pricing",
+      "subtext": "Zero Hidden Costs"
+    }
   ],
   "services": [
     {
@@ -164,8 +180,17 @@
       "status": "Completed",
       "image": "/images/residential.jpg",
       "description": "A triplex contemporary luxury villa featuring double-height living spaces, energy-efficient glazing, landscaped terrace garden, and customized Teak woodwork.",
-      "servicesProvided": ["Architectural Planning", "Structural Engineering", "Civil Construction", "Turnkey Interiors"],
-      "highlights": ["15-Year Structural Warranty", "100% Vasthu Compliant", "German Hardware Fittings"]
+      "servicesProvided": [
+        "Architectural Planning",
+        "Structural Engineering",
+        "Civil Construction",
+        "Turnkey Interiors"
+      ],
+      "highlights": [
+        "15-Year Structural Warranty",
+        "100% Vasthu Compliant",
+        "German Hardware Fittings"
+      ]
     },
     {
       "id": "proj-2",
@@ -178,8 +203,17 @@
       "status": "Ongoing (80%)",
       "image": "/images/commercial.jpg",
       "description": "A landmark G+4 commercial complex with modern glass curtain walls, ground-floor retail showrooms, executive corporate floors, and basement parking.",
-      "servicesProvided": ["Structural Design", "Commercial Civil Construction", "Facade Glazing", "MEP Engineering"],
-      "highlights": ["High Load Bearing Capacity", "Earthquake Resistant IS-1893", "Milestone Payment Schedule"]
+      "servicesProvided": [
+        "Structural Design",
+        "Commercial Civil Construction",
+        "Facade Glazing",
+        "MEP Engineering"
+      ],
+      "highlights": [
+        "High Load Bearing Capacity",
+        "Earthquake Resistant IS-1893",
+        "Milestone Payment Schedule"
+      ]
     },
     {
       "id": "proj-3",
@@ -192,8 +226,16 @@
       "status": "Completed",
       "image": "/images/hero-bg.jpg",
       "description": "Premium multi-family residential development designed with modern cantilevers, wooden finish louvers, and spacious balconies overlooking scenic greenery.",
-      "servicesProvided": ["Complete Architecture", "Structural Design", "Turnkey Construction"],
-      "highlights": ["Seismic Zone III Proofing", "Rainwater Harvesting", "15-Year Warranty"]
+      "servicesProvided": [
+        "Complete Architecture",
+        "Structural Design",
+        "Turnkey Construction"
+      ],
+      "highlights": [
+        "Seismic Zone III Proofing",
+        "Rainwater Harvesting",
+        "15-Year Warranty"
+      ]
     },
     {
       "id": "proj-4",
@@ -206,8 +248,16 @@
       "status": "Completed",
       "image": "/images/architecture.jpg",
       "description": "A modern architectural study featuring optimized natural daylight penetration, cross-ventilation corridors, and 3D geometric exterior elevation.",
-      "servicesProvided": ["2D & 3D Architectural Drawings", "Elevation Modeling", "Vasthu Verification"],
-      "highlights": ["Government Sanction Approved", "Zero Space Wastage", "Modern Aesthetic"]
+      "servicesProvided": [
+        "2D & 3D Architectural Drawings",
+        "Elevation Modeling",
+        "Vasthu Verification"
+      ],
+      "highlights": [
+        "Government Sanction Approved",
+        "Zero Space Wastage",
+        "Modern Aesthetic"
+      ]
     },
     {
       "id": "proj-5",
@@ -220,8 +270,16 @@
       "status": "Ongoing",
       "image": "/images/structural.jpg",
       "description": "Heavy industrial and warehouse reinforced concrete framing engineered by BuildSphere Engineering with deep pile foundations and vibration damping.",
-      "servicesProvided": ["Soil Investigation Analysis", "Structural Detailing", "Quality Audit"],
-      "highlights": ["Grade Fe-550D TMT Steel", "NABL Tested Concrete M-30", "Safety Audited"]
+      "servicesProvided": [
+        "Soil Investigation Analysis",
+        "Structural Detailing",
+        "Quality Audit"
+      ],
+      "highlights": [
+        "Grade Fe-550D TMT Steel",
+        "NABL Tested Concrete M-30",
+        "Safety Audited"
+      ]
     },
     {
       "id": "proj-6",
@@ -234,19 +292,76 @@
       "status": "Completed",
       "image": "/images/interior.jpg",
       "description": "Ultra-luxury modern interior makeover featuring Italian Botticino marble flooring, automated cove ceiling lighting, and custom acrylic kitchen cabinetry.",
-      "servicesProvided": ["Interior Space Planning", "Modular Kitchen", "False Ceiling & Lighting", "Carpentry"],
-      "highlights": ["Marine Grade Plywood", "Hafele Hardware", "Smart Automation"]
+      "servicesProvided": [
+        "Interior Space Planning",
+        "Modular Kitchen",
+        "False Ceiling & Lighting",
+        "Carpentry"
+      ],
+      "highlights": [
+        "Marine Grade Plywood",
+        "Hafele Hardware",
+        "Smart Automation"
+      ]
     }
   ],
   "gallery": [
-    { "id": "gal-1", "title": "Modern Villa Elevation", "category": "residential", "image": "/images/residential.jpg", "caption": "Contemporary luxury 3-story villa in Vijayawada" },
-    { "id": "gal-2", "title": "Corporate Commercial Arcade", "category": "commercial", "image": "/images/commercial.jpg", "caption": "Modern glass facade commercial hub near Ring Road" },
-    { "id": "gal-3", "title": "Architectural Drafting & 3D Modeling", "category": "architecture", "image": "/images/architecture.jpg", "caption": "Precision 2D/3D floor layouts and municipal approval designs" },
-    { "id": "gal-4", "title": "Civil Structural Columns & Rebar", "category": "construction", "image": "/images/structural.jpg", "caption": "Reinforced structural concrete inspected on site" },
-    { "id": "gal-5", "title": "Luxury Living Room & False Ceiling", "category": "interiors", "image": "/images/interior.jpg", "caption": "Bespoke ambient interior architecture with Italian marble" },
-    { "id": "gal-6", "title": "Nighttime Architectural Facade", "category": "commercial", "image": "/images/hero-bg.jpg", "caption": "Integrated facade uplighting on completed urban development" },
-    { "id": "gal-7", "title": "Residential Terrace Landscaping", "category": "residential", "image": "/images/residential.jpg", "caption": "Roof garden structural slab with advanced waterproofing" },
-    { "id": "gal-8", "title": "Interior Staircase & Lighting", "category": "interiors", "image": "/images/interior.jpg", "caption": "Floating wooden staircase with tempered glass railings" }
+    {
+      "id": "gal-1",
+      "title": "Modern Villa Elevation",
+      "category": "residential",
+      "image": "/images/residential.jpg",
+      "caption": "Contemporary luxury 3-story villa in Vijayawada"
+    },
+    {
+      "id": "gal-2",
+      "title": "Corporate Commercial Arcade",
+      "category": "commercial",
+      "image": "/images/commercial.jpg",
+      "caption": "Modern glass facade commercial hub near Ring Road"
+    },
+    {
+      "id": "gal-3",
+      "title": "Architectural Drafting & 3D Modeling",
+      "category": "architecture",
+      "image": "/images/architecture.jpg",
+      "caption": "Precision 2D/3D floor layouts and municipal approval designs"
+    },
+    {
+      "id": "gal-4",
+      "title": "Civil Structural Columns & Rebar",
+      "category": "construction",
+      "image": "/images/structural.jpg",
+      "caption": "Reinforced structural concrete inspected on site"
+    },
+    {
+      "id": "gal-5",
+      "title": "Luxury Living Room & False Ceiling",
+      "category": "interiors",
+      "image": "/images/interior.jpg",
+      "caption": "Bespoke ambient interior architecture with Italian marble"
+    },
+    {
+      "id": "gal-6",
+      "title": "Nighttime Architectural Facade",
+      "category": "commercial",
+      "image": "/images/hero-bg.jpg",
+      "caption": "Integrated facade uplighting on completed urban development"
+    },
+    {
+      "id": "gal-7",
+      "title": "Residential Terrace Landscaping",
+      "category": "residential",
+      "image": "/images/residential.jpg",
+      "caption": "Roof garden structural slab with advanced waterproofing"
+    },
+    {
+      "id": "gal-8",
+      "title": "Interior Staircase & Lighting",
+      "category": "interiors",
+      "image": "/images/interior.jpg",
+      "caption": "Floating wooden staircase with tempered glass railings"
+    }
   ],
   "testimonials": [
     {
@@ -279,23 +394,63 @@
   ],
   "estimatorRates": {
     "residential": {
-      "basic": { "rate": 1650, "label": "Basic Package", "spec": "UltraTech/Zuari Cement, Fe-500 Steel, Standard Red Bricks, Vitrified 2x2 Tiles, Asian Paints, Standard UPVC Windows" },
-      "standard": { "rate": 1950, "label": "Standard Package", "spec": "Grade 53 Cement, Vizag/Tata TMT Steel, Wire-cut Bricks, 2x4 Glazed Vitrified Tiles, Teak Wood Main Door, Jaguar/Cera Fittings, Finolex Wiring" },
-      "premium": { "rate": 2400, "label": "Premium Package", "spec": "Tata Tiscon TMT Steel, Ready-Mix Concrete M25, Full Teak Wood Frames, Italian Marble / GVT Flooring, Grohe/Kohler Bathrooms, Full False Ceiling" },
-      "luxury": { "rate": 2900, "label": "Ultra Luxury", "spec": "Architectural Customization, Imported Marble, Smart Home Automation, Soundproof Double Glazed Windows, Designer Landscapes, VRV AC Conduits" }
+      "basic": {
+        "rate": 1650,
+        "label": "Basic Package",
+        "spec": "UltraTech/Zuari Cement, Fe-500 Steel, Standard Red Bricks, Vitrified 2x2 Tiles, Asian Paints, Standard UPVC Windows"
+      },
+      "standard": {
+        "rate": 1950,
+        "label": "Standard Package",
+        "spec": "Grade 53 Cement, Vizag/Tata TMT Steel, Wire-cut Bricks, 2x4 Glazed Vitrified Tiles, Teak Wood Main Door, Jaguar/Cera Fittings, Finolex Wiring"
+      },
+      "premium": {
+        "rate": 2400,
+        "label": "Premium Package",
+        "spec": "Tata Tiscon TMT Steel, Ready-Mix Concrete M25, Full Teak Wood Frames, Italian Marble / GVT Flooring, Grohe/Kohler Bathrooms, Full False Ceiling"
+      },
+      "luxury": {
+        "rate": 2900,
+        "label": "Ultra Luxury",
+        "spec": "Architectural Customization, Imported Marble, Smart Home Automation, Soundproof Double Glazed Windows, Designer Landscapes, VRV AC Conduits"
+      }
     },
     "commercial": {
-      "basic": { "rate": 1750, "label": "Commercial Basic", "spec": "Commercial Grade RCC Frame, Vitrified Flooring, Heavy-duty Aluminium Glazing, Standard Fire Safety Conduits" },
-      "standard": { "rate": 2200, "label": "Commercial Standard", "spec": "Curtain Wall Structural Glazing, High-Traffic Granite/Tile Flooring, Concealed HVAC ducts, High-Speed Lift Shafts" },
-      "premium": { "rate": 2750, "label": "Commercial Premium", "spec": "Grade A Corporate Finishes, Acoustic Ceilings, Integrated Access Control, Full Fire Fighting Hydrant System, Energy-Efficient Low-E Glass" }
+      "basic": {
+        "rate": 1750,
+        "label": "Commercial Basic",
+        "spec": "Commercial Grade RCC Frame, Vitrified Flooring, Heavy-duty Aluminium Glazing, Standard Fire Safety Conduits"
+      },
+      "standard": {
+        "rate": 2200,
+        "label": "Commercial Standard",
+        "spec": "Curtain Wall Structural Glazing, High-Traffic Granite/Tile Flooring, Concealed HVAC ducts, High-Speed Lift Shafts"
+      },
+      "premium": {
+        "rate": 2750,
+        "label": "Commercial Premium",
+        "spec": "Grade A Corporate Finishes, Acoustic Ceilings, Integrated Access Control, Full Fire Fighting Hydrant System, Energy-Efficient Low-E Glass"
+      }
     },
     "renovation": {
-      "basic": { "rate": 800, "label": "Renovation Basic", "spec": "Plaster repairs, Wall skim coating, Full exterior & interior repainting, Basic electrical rewiring, Waterproofing patch repairs" },
-      "standard": { "rate": 1250, "label": "Renovation Modern", "spec": "New tile overlay, Modern false ceiling with LED profiles, Bathroom remodelling with sanitary upgrade, Elevation modern cladding" },
-      "premium": { "rate": 1750, "label": "Complete Overhaul", "spec": "Structural strengthening, Layout reconfiguration, New plumbing/wiring lines, Premium flooring, Designer facade facelift, 5-Yr Guaranteed Waterproofing" }
+      "basic": {
+        "rate": 800,
+        "label": "Renovation Basic",
+        "spec": "Plaster repairs, Wall skim coating, Full exterior & interior repainting, Basic electrical rewiring, Waterproofing patch repairs"
+      },
+      "standard": {
+        "rate": 1250,
+        "label": "Renovation Modern",
+        "spec": "New tile overlay, Modern false ceiling with LED profiles, Bathroom remodelling with sanitary upgrade, Elevation modern cladding"
+      },
+      "premium": {
+        "rate": 1750,
+        "label": "Complete Overhaul",
+        "spec": "Structural strengthening, Layout reconfiguration, New plumbing/wiring lines, Premium flooring, Designer facade facelift, 5-Yr Guaranteed Waterproofing"
+      }
     },
     "floorMultipliers": {
-      "g": 1.0,
+      "g": 1,
       "g1": 1.95,
       "g2": 2.9,
       "g3": 3.85,
@@ -314,14 +469,46 @@
       "status": "In Progress",
       "lastUpdated": "2026-10-20",
       "stages": [
-        { "name": "Earthwork & Foundation", "percent": 100, "status": "Completed" },
-        { "name": "RCC Structure & Slabs", "percent": 100, "status": "Completed" },
-        { "name": "Brick Masonry & Partitions", "percent": 100, "status": "Completed" },
-        { "name": "Internal & External Plastering", "percent": 95, "status": "In Progress" },
-        { "name": "Electrical & Plumbing Piping", "percent": 75, "status": "In Progress" },
-        { "name": "Flooring & Tile Work", "percent": 40, "status": "In Progress" },
-        { "name": "Painting & Finishing", "percent": 10, "status": "Pending" },
-        { "name": "Handover & Certification", "percent": 0, "status": "Pending" }
+        {
+          "name": "Earthwork & Foundation",
+          "percent": 100,
+          "status": "Completed"
+        },
+        {
+          "name": "RCC Structure & Slabs",
+          "percent": 100,
+          "status": "Completed"
+        },
+        {
+          "name": "Brick Masonry & Partitions",
+          "percent": 100,
+          "status": "Completed"
+        },
+        {
+          "name": "Internal & External Plastering",
+          "percent": 95,
+          "status": "In Progress"
+        },
+        {
+          "name": "Electrical & Plumbing Piping",
+          "percent": 75,
+          "status": "In Progress"
+        },
+        {
+          "name": "Flooring & Tile Work",
+          "percent": 40,
+          "status": "In Progress"
+        },
+        {
+          "name": "Painting & Finishing",
+          "percent": 10,
+          "status": "Pending"
+        },
+        {
+          "name": "Handover & Certification",
+          "percent": 0,
+          "status": "Pending"
+        }
       ]
     },
     {
@@ -335,14 +522,46 @@
       "status": "In Progress",
       "lastUpdated": "2026-10-22",
       "stages": [
-        { "name": "Foundation & Basement Retaining", "percent": 100, "status": "Completed" },
-        { "name": "RCC Columns & Slabs (Up to 4th Floor)", "percent": 100, "status": "Completed" },
-        { "name": "Brick Work & AAC Blocks", "percent": 70, "status": "In Progress" },
-        { "name": "Curtain Wall & Facade Framework", "percent": 45, "status": "In Progress" },
-        { "name": "Electrical Conduiting & Fire Lines", "percent": 30, "status": "In Progress" },
-        { "name": "Lift Shaft & Staircase Granites", "percent": 20, "status": "Pending" },
-        { "name": "Interior Finishing", "percent": 0, "status": "Pending" },
-        { "name": "Final Handover", "percent": 0, "status": "Pending" }
+        {
+          "name": "Foundation & Basement Retaining",
+          "percent": 100,
+          "status": "Completed"
+        },
+        {
+          "name": "RCC Columns & Slabs (Up to 4th Floor)",
+          "percent": 100,
+          "status": "Completed"
+        },
+        {
+          "name": "Brick Work & AAC Blocks",
+          "percent": 70,
+          "status": "In Progress"
+        },
+        {
+          "name": "Curtain Wall & Facade Framework",
+          "percent": 45,
+          "status": "In Progress"
+        },
+        {
+          "name": "Electrical Conduiting & Fire Lines",
+          "percent": 30,
+          "status": "In Progress"
+        },
+        {
+          "name": "Lift Shaft & Staircase Granites",
+          "percent": 20,
+          "status": "Pending"
+        },
+        {
+          "name": "Interior Finishing",
+          "percent": 0,
+          "status": "Pending"
+        },
+        {
+          "name": "Final Handover",
+          "percent": 0,
+          "status": "Pending"
+        }
       ]
     },
     {
@@ -356,18 +575,63 @@
       "status": "Final Finishing",
       "lastUpdated": "2026-10-24",
       "stages": [
-        { "name": "Earthwork & Foundation", "percent": 100, "status": "Completed" },
-        { "name": "RCC Structure", "percent": 100, "status": "Completed" },
-        { "name": "Brickwork & Plastering", "percent": 100, "status": "Completed" },
-        { "name": "Electrical & Plumbing", "percent": 100, "status": "Completed" },
-        { "name": "Flooring (Italian Marble)", "percent": 100, "status": "Completed" },
-        { "name": "Interior Woodwork & False Ceiling", "percent": 90, "status": "In Progress" },
-        { "name": "Exterior Paint & Landscaping", "percent": 85, "status": "In Progress" },
-        { "name": "Handover & 15-Yr Warranty Certificate", "percent": 0, "status": "Scheduled" }
+        {
+          "name": "Earthwork & Foundation",
+          "percent": 100,
+          "status": "Completed"
+        },
+        {
+          "name": "RCC Structure",
+          "percent": 100,
+          "status": "Completed"
+        },
+        {
+          "name": "Brickwork & Plastering",
+          "percent": 100,
+          "status": "Completed"
+        },
+        {
+          "name": "Electrical & Plumbing",
+          "percent": 100,
+          "status": "Completed"
+        },
+        {
+          "name": "Flooring (Italian Marble)",
+          "percent": 100,
+          "status": "Completed"
+        },
+        {
+          "name": "Interior Woodwork & False Ceiling",
+          "percent": 90,
+          "status": "In Progress"
+        },
+        {
+          "name": "Exterior Paint & Landscaping",
+          "percent": 85,
+          "status": "In Progress"
+        },
+        {
+          "name": "Handover & 15-Yr Warranty Certificate",
+          "percent": 0,
+          "status": "Scheduled"
+        }
       ]
     }
   ],
   "enquiries": [
+    {
+      "id": "enq-1792855109518",
+      "name": "R. K. Varma",
+      "phone": "+91 99887 76655",
+      "email": "rkvarma@example.com",
+      "projectType": "Residential Construction",
+      "location": "Poranki, Vijayawada",
+      "approxArea": "3000 sq.ft",
+      "message": "Need complete duplex estimation and architectural plan.",
+      "estimatedCost": "",
+      "status": "NEW",
+      "createdAt": "2026-10-24T15:18:29.518Z"
+    },
     {
       "id": "enq-101",
       "name": "P. Sudhakar",
