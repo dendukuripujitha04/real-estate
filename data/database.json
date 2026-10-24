@@ -1,0 +1,402 @@
+{
+  "company": {
+    "name": "BuildSphere Infra & Engineering Works",
+    "shortName": "BuildSphere",
+    "tagline": "Building Your Dreams with Quality & Trust",
+    "established": 2004,
+    "experienceYears": 20,
+    "founder": "S. Suresh Chandra & Engineering Council",
+    "phones": [
+      "+91 81795 17373",
+      "+91 96760 18666",
+      "+91 70757 37548"
+    ],
+    "primaryPhone": "+918179517373",
+    "whatsappPhone": "918179517373",
+    "email": "contact@buildsphere.in",
+    "altEmail": "buildsphere2004@gmail.com",
+    "address": {
+      "street": "Door No. 6-13, Kaveti Vari Street, Ring Road (Near M Convention)",
+      "area": "Ramavarapadu",
+      "city": "Vijayawada",
+      "state": "Andhra Pradesh",
+      "pincode": "521108",
+      "country": "India"
+    },
+    "businessHours": {
+      "weekdays": "Monday – Saturday: 9:00 AM – 7:30 PM",
+      "sunday": "Sunday: By Appointment"
+    },
+    "serviceAreas": [
+      "Vijayawada",
+      "Amaravati",
+      "Guntur",
+      "N.T.R. District",
+      "Krishna District",
+      "East & West Godavari Districts"
+    ],
+    "guarantees": {
+      "structuralWarranty": "15-Year Structural Warranty",
+      "leakageGuarantee": "5-Year Leakage / Waterproofing Guarantee",
+      "model": "Milestone-Based Escrow Track & Transact Model"
+    },
+    "philosophy": "Listen Better — Plan Better — Build Better"
+  },
+  "stats": [
+    { "value": "20+", "label": "Years Experience", "subtext": "Excellence Since 2004" },
+    { "value": "350+", "label": "Projects Delivered", "subtext": "Residential & Commercial" },
+    { "value": "15 Yrs", "label": "Structural Warranty", "subtext": "Engineered For Generations" },
+    { "value": "100%", "label": "Transparent Pricing", "subtext": "Zero Hidden Costs" }
+  ],
+  "services": [
+    {
+      "id": "residential",
+      "title": "Residential Construction",
+      "tag": "Villas & Homes",
+      "image": "/images/residential.jpg",
+      "shortDesc": "Independent luxury villas, duplex homes, and multi-floor residential apartments built with reinforced structural strength.",
+      "fullDesc": "From custom architectural planning to final turnkey finishing, BuildSphere designs and builds high-quality residential houses tailored to your family's lifestyle and budget, strictly adhering to Vasthu principles and IS building codes.",
+      "features": [
+        "Independent Luxury Villas & Duplexes",
+        "Residential G+1, G+2 & Multi-Story Buildings",
+        "100% Vasthu-Compliant Layout Planning",
+        "High-Grade TMT Steel & Certified Concrete",
+        "Turnkey Construction from Foundation to Handover",
+        "15-Year Structural Warranty Included"
+      ],
+      "cta": "DISCUSS YOUR PROJECT"
+    },
+    {
+      "id": "commercial",
+      "title": "Commercial Construction",
+      "tag": "Offices & Retail",
+      "image": "/images/commercial.jpg",
+      "shortDesc": "Modern commercial complexes, corporate offices, retail spaces, and showrooms engineered for maximum utility and aesthetics.",
+      "fullDesc": "We construct modern commercial properties designed for business longevity. With BuildSphere's in-house structural engineering team, we ensure expansive column-free layouts, high-load capacities, fire safety norms, and rapid project delivery.",
+      "features": [
+        "Commercial Complexes & Shopping Centers",
+        "Corporate Headquarters & IT Office Spaces",
+        "High-Load Bearing Structural Frameworks",
+        "Modern Glass & ACP Facade Integration",
+        "Government Approvals & Building Bye-Laws Compliance",
+        "Fast-Track Turnaround with Milestone Tracking"
+      ],
+      "cta": "DISCUSS YOUR PROJECT"
+    },
+    {
+      "id": "architectural",
+      "title": "Architectural Design",
+      "tag": "Planning & 3D Elevations",
+      "image": "/images/architecture.jpg",
+      "shortDesc": "Scientific space planning, contemporary 2D floor layouts, realistic 3D exterior elevations, and government sanction drawings.",
+      "fullDesc": "Great structures start with visionary blueprints. Our architects craft functional, aesthetically striking plans customized for natural ventilation, sunlight, and spatial harmony, complete with realistic 3D renders before ground is broken.",
+      "features": [
+        "Comprehensive 2D & 3D Floor Layouts",
+        "Photorealistic 3D Exterior Facade Elevations",
+        "Municipal Approval & Sanction Drawings",
+        "Vasthu Sastra Compliant Space Planning",
+        "Electrical & Plumbing Schematics (MEP)",
+        "Bank Loan Project Estimation Documentation"
+      ],
+      "cta": "REQUEST CONSULTATION"
+    },
+    {
+      "id": "structural",
+      "title": "Structural Design",
+      "tag": "BuildSphere Engineering",
+      "image": "/images/structural.jpg",
+      "shortDesc": "Earthquake-resistant structural engineering, soil-specific foundation designs, beam-column detailing, and stability certificates.",
+      "fullDesc": "Our in-house structural engineering team delivers mathematically sound, seismically resilient designs. Every footing, column, and slab is calculated with precision to withstand heavy loads and harsh environmental conditions.",
+      "features": [
+        "Earthquake & Seismic-Resistant Structural Detailing",
+        "Soil Bearing Capacity & Deep/Shallow Foundation Design",
+        "RCC Beam, Column & Slab Reinforcement Schedules",
+        "Steel Trusses & Pre-Engineered Building (PEB) Design",
+        "Structural Safety & Stability Certification",
+        "On-Site Engineer Inspection & Quality Audits"
+      ],
+      "cta": "REQUEST CONSULTATION"
+    },
+    {
+      "id": "interior",
+      "title": "Interior Design",
+      "tag": "Luxury Living Spaces",
+      "image": "/images/interior.jpg",
+      "shortDesc": "Bespoke residential and corporate interior solutions including modular kitchens, designer false ceilings, and ambient lighting.",
+      "fullDesc": "Transform your bare walls into luxurious, ergonomic living environments. We blend premium materials, ambient lighting, custom carpentry, and Italian marble finishes to craft breathtaking living rooms, bedrooms, and office suites.",
+      "features": [
+        "Custom Modular Kitchens with Premium Hardware",
+        "Designer False Ceilings with Warm Ambient Lighting",
+        "Full Wardrobes, Crockery Units & TV Wall Units",
+        "Flooring Upgrades (Italian Marble, Vitrified Tiles)",
+        "Turnkey Corporate Office & Retail Interiors",
+        "3D Interior Visualization Before Execution"
+      ],
+      "cta": "DISCUSS YOUR INTERIOR"
+    },
+    {
+      "id": "renovation",
+      "title": "Building Renovation",
+      "tag": "Modernization & Remodeling",
+      "image": "/images/hero-bg.jpg",
+      "shortDesc": "Complete home transformation, structural retrofitting, modern facade facelifts, floor additions, and waterproofing solutions.",
+      "fullDesc": "Breathe new life into aging buildings. Whether you need an exterior makeover, adding additional floors, structural strengthening, or solving persistent dampness with advanced waterproofing, BuildSphere delivers hassle-free renovation.",
+      "features": [
+        "Complete Home & Commercial Remodeling",
+        "Structural Retrofitting & Column Jacketing",
+        "Modern Exterior Facade & Elevation Makeover",
+        "Additional Floor Additions & Space Expansion",
+        "5-Year Guaranteed Waterproofing & Leakage Treatments",
+        "Bathroom & Kitchen Modernization"
+      ],
+      "cta": "START RENOVATION"
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-1",
+      "title": "BuildSphere Royal Villa",
+      "category": "residential",
+      "categoryLabel": "Residential",
+      "location": "Poranki, Vijayawada",
+      "area": "4,200 Sq.Ft",
+      "year": "2024",
+      "status": "Completed",
+      "image": "/images/residential.jpg",
+      "description": "A triplex contemporary luxury villa featuring double-height living spaces, energy-efficient glazing, landscaped terrace garden, and customized Teak woodwork.",
+      "servicesProvided": ["Architectural Planning", "Structural Engineering", "Civil Construction", "Turnkey Interiors"],
+      "highlights": ["15-Year Structural Warranty", "100% Vasthu Compliant", "German Hardware Fittings"]
+    },
+    {
+      "id": "proj-2",
+      "title": "Vertex Corporate Arcade",
+      "category": "commercial",
+      "categoryLabel": "Commercial",
+      "location": "Ramavarapadu Ring Road, Vijayawada",
+      "area": "18,500 Sq.Ft",
+      "year": "2024",
+      "status": "Ongoing (80%)",
+      "image": "/images/commercial.jpg",
+      "description": "A landmark G+4 commercial complex with modern glass curtain walls, ground-floor retail showrooms, executive corporate floors, and basement parking.",
+      "servicesProvided": ["Structural Design", "Commercial Civil Construction", "Facade Glazing", "MEP Engineering"],
+      "highlights": ["High Load Bearing Capacity", "Earthquake Resistant IS-1893", "Milestone Payment Schedule"]
+    },
+    {
+      "id": "proj-3",
+      "title": "Amaravati Lakeview Residences",
+      "category": "residential",
+      "categoryLabel": "Residential",
+      "location": "Tadepalli, Amaravati Capital Region",
+      "area": "7,800 Sq.Ft",
+      "year": "2023",
+      "status": "Completed",
+      "image": "/images/hero-bg.jpg",
+      "description": "Premium multi-family residential development designed with modern cantilevers, wooden finish louvers, and spacious balconies overlooking scenic greenery.",
+      "servicesProvided": ["Complete Architecture", "Structural Design", "Turnkey Construction"],
+      "highlights": ["Seismic Zone III Proofing", "Rainwater Harvesting", "15-Year Warranty"]
+    },
+    {
+      "id": "proj-4",
+      "title": "Modern Studio Architectural Elevation",
+      "category": "architecture",
+      "categoryLabel": "Architecture",
+      "location": "Benz Circle, Vijayawada",
+      "area": "3,400 Sq.Ft",
+      "year": "2024",
+      "status": "Completed",
+      "image": "/images/architecture.jpg",
+      "description": "A modern architectural study featuring optimized natural daylight penetration, cross-ventilation corridors, and 3D geometric exterior elevation.",
+      "servicesProvided": ["2D & 3D Architectural Drawings", "Elevation Modeling", "Vasthu Verification"],
+      "highlights": ["Government Sanction Approved", "Zero Space Wastage", "Modern Aesthetic"]
+    },
+    {
+      "id": "proj-5",
+      "title": "BuildSphere Multi-Tier Framework",
+      "category": "structural",
+      "categoryLabel": "Structural Engineering",
+      "location": "Gannavaram Highway, Krishna District",
+      "area": "12,000 Sq.Ft",
+      "year": "2024",
+      "status": "Ongoing",
+      "image": "/images/structural.jpg",
+      "description": "Heavy industrial and warehouse reinforced concrete framing engineered by BuildSphere Engineering with deep pile foundations and vibration damping.",
+      "servicesProvided": ["Soil Investigation Analysis", "Structural Detailing", "Quality Audit"],
+      "highlights": ["Grade Fe-550D TMT Steel", "NABL Tested Concrete M-30", "Safety Audited"]
+    },
+    {
+      "id": "proj-6",
+      "title": "The Royal Haven Living Hall & Interiors",
+      "category": "interior",
+      "categoryLabel": "Interior Design",
+      "location": "Mogalrajpuram, Vijayawada",
+      "area": "2,800 Sq.Ft",
+      "year": "2024",
+      "status": "Completed",
+      "image": "/images/interior.jpg",
+      "description": "Ultra-luxury modern interior makeover featuring Italian Botticino marble flooring, automated cove ceiling lighting, and custom acrylic kitchen cabinetry.",
+      "servicesProvided": ["Interior Space Planning", "Modular Kitchen", "False Ceiling & Lighting", "Carpentry"],
+      "highlights": ["Marine Grade Plywood", "Hafele Hardware", "Smart Automation"]
+    }
+  ],
+  "gallery": [
+    { "id": "gal-1", "title": "Modern Villa Elevation", "category": "residential", "image": "/images/residential.jpg", "caption": "Contemporary luxury 3-story villa in Vijayawada" },
+    { "id": "gal-2", "title": "Corporate Commercial Arcade", "category": "commercial", "image": "/images/commercial.jpg", "caption": "Modern glass facade commercial hub near Ring Road" },
+    { "id": "gal-3", "title": "Architectural Drafting & 3D Modeling", "category": "architecture", "image": "/images/architecture.jpg", "caption": "Precision 2D/3D floor layouts and municipal approval designs" },
+    { "id": "gal-4", "title": "Civil Structural Columns & Rebar", "category": "construction", "image": "/images/structural.jpg", "caption": "Reinforced structural concrete inspected on site" },
+    { "id": "gal-5", "title": "Luxury Living Room & False Ceiling", "category": "interiors", "image": "/images/interior.jpg", "caption": "Bespoke ambient interior architecture with Italian marble" },
+    { "id": "gal-6", "title": "Nighttime Architectural Facade", "category": "commercial", "image": "/images/hero-bg.jpg", "caption": "Integrated facade uplighting on completed urban development" },
+    { "id": "gal-7", "title": "Residential Terrace Landscaping", "category": "residential", "image": "/images/residential.jpg", "caption": "Roof garden structural slab with advanced waterproofing" },
+    { "id": "gal-8", "title": "Interior Staircase & Lighting", "category": "interiors", "image": "/images/interior.jpg", "caption": "Floating wooden staircase with tempered glass railings" }
+  ],
+  "testimonials": [
+    {
+      "id": "test-1",
+      "name": "K. Venkata Rao",
+      "role": "Villa Owner",
+      "location": "Poranki, Vijayawada",
+      "project": "Residential Villa (G+2)",
+      "rating": 5,
+      "text": "Building a home is once in a lifetime, and choosing BuildSphere was the best decision. Their milestone payment model gave us immense peace of mind. The structural engineering is solid and the finishing is top notch. Highly recommended!"
+    },
+    {
+      "id": "test-2",
+      "name": "M. Prasad Reddy",
+      "role": "Commercial Developer",
+      "location": "Ramavarapadu, Vijayawada",
+      "project": "Commercial Complex (16,000 Sq.Ft)",
+      "rating": 5,
+      "text": "BuildSphere delivered our commercial complex 3 weeks ahead of schedule. Their transparency in material specifications—from Vizag Steel to UltraTech cement—was 100% genuine. The team handles government approvals and site supervision with complete professionalism."
+    },
+    {
+      "id": "test-3",
+      "name": "S. Anusha",
+      "role": "Independent Homeowner",
+      "location": "Tadepalli, Amaravati",
+      "project": "Architectural Design & Construction",
+      "rating": 5,
+      "text": "Their 3D elevation and interior design match the final constructed house down to the smallest millimeter! 20+ years of engineering experience shows in how effortlessly they manage labour, materials, and Vasthu requirements."
+    }
+  ],
+  "estimatorRates": {
+    "residential": {
+      "basic": { "rate": 1650, "label": "Basic Package", "spec": "UltraTech/Zuari Cement, Fe-500 Steel, Standard Red Bricks, Vitrified 2x2 Tiles, Asian Paints, Standard UPVC Windows" },
+      "standard": { "rate": 1950, "label": "Standard Package", "spec": "Grade 53 Cement, Vizag/Tata TMT Steel, Wire-cut Bricks, 2x4 Glazed Vitrified Tiles, Teak Wood Main Door, Jaguar/Cera Fittings, Finolex Wiring" },
+      "premium": { "rate": 2400, "label": "Premium Package", "spec": "Tata Tiscon TMT Steel, Ready-Mix Concrete M25, Full Teak Wood Frames, Italian Marble / GVT Flooring, Grohe/Kohler Bathrooms, Full False Ceiling" },
+      "luxury": { "rate": 2900, "label": "Ultra Luxury", "spec": "Architectural Customization, Imported Marble, Smart Home Automation, Soundproof Double Glazed Windows, Designer Landscapes, VRV AC Conduits" }
+    },
+    "commercial": {
+      "basic": { "rate": 1750, "label": "Commercial Basic", "spec": "Commercial Grade RCC Frame, Vitrified Flooring, Heavy-duty Aluminium Glazing, Standard Fire Safety Conduits" },
+      "standard": { "rate": 2200, "label": "Commercial Standard", "spec": "Curtain Wall Structural Glazing, High-Traffic Granite/Tile Flooring, Concealed HVAC ducts, High-Speed Lift Shafts" },
+      "premium": { "rate": 2750, "label": "Commercial Premium", "spec": "Grade A Corporate Finishes, Acoustic Ceilings, Integrated Access Control, Full Fire Fighting Hydrant System, Energy-Efficient Low-E Glass" }
+    },
+    "renovation": {
+      "basic": { "rate": 800, "label": "Renovation Basic", "spec": "Plaster repairs, Wall skim coating, Full exterior & interior repainting, Basic electrical rewiring, Waterproofing patch repairs" },
+      "standard": { "rate": 1250, "label": "Renovation Modern", "spec": "New tile overlay, Modern false ceiling with LED profiles, Bathroom remodelling with sanitary upgrade, Elevation modern cladding" },
+      "premium": { "rate": 1750, "label": "Complete Overhaul", "spec": "Structural strengthening, Layout reconfiguration, New plumbing/wiring lines, Premium flooring, Designer facade facelift, 5-Yr Guaranteed Waterproofing" }
+    },
+    "floorMultipliers": {
+      "g": 1.0,
+      "g1": 1.95,
+      "g2": 2.9,
+      "g3": 3.85,
+      "g4": 4.8
+    }
+  },
+  "projectProgress": [
+    {
+      "code": "BSP-2024-01",
+      "clientName": "Sri K. V. Rao",
+      "projectTitle": "BuildSphere Elite Residence",
+      "location": "Poranki, Vijayawada",
+      "type": "Residential Villa (G+2)",
+      "totalSqFt": "4,200 Sq.Ft",
+      "overallProgress": 78,
+      "status": "In Progress",
+      "lastUpdated": "2026-10-20",
+      "stages": [
+        { "name": "Earthwork & Foundation", "percent": 100, "status": "Completed" },
+        { "name": "RCC Structure & Slabs", "percent": 100, "status": "Completed" },
+        { "name": "Brick Masonry & Partitions", "percent": 100, "status": "Completed" },
+        { "name": "Internal & External Plastering", "percent": 95, "status": "In Progress" },
+        { "name": "Electrical & Plumbing Piping", "percent": 75, "status": "In Progress" },
+        { "name": "Flooring & Tile Work", "percent": 40, "status": "In Progress" },
+        { "name": "Painting & Finishing", "percent": 10, "status": "Pending" },
+        { "name": "Handover & Certification", "percent": 0, "status": "Pending" }
+      ]
+    },
+    {
+      "code": "BSP-2024-02",
+      "clientName": "Vertex Commercial Infra",
+      "projectTitle": "Vertex Corporate Arcade",
+      "location": "Ramavarapadu Ring Road",
+      "type": "Commercial Complex (G+4)",
+      "totalSqFt": "18,500 Sq.Ft",
+      "overallProgress": 52,
+      "status": "In Progress",
+      "lastUpdated": "2026-10-22",
+      "stages": [
+        { "name": "Foundation & Basement Retaining", "percent": 100, "status": "Completed" },
+        { "name": "RCC Columns & Slabs (Up to 4th Floor)", "percent": 100, "status": "Completed" },
+        { "name": "Brick Work & AAC Blocks", "percent": 70, "status": "In Progress" },
+        { "name": "Curtain Wall & Facade Framework", "percent": 45, "status": "In Progress" },
+        { "name": "Electrical Conduiting & Fire Lines", "percent": 30, "status": "In Progress" },
+        { "name": "Lift Shaft & Staircase Granites", "percent": 20, "status": "Pending" },
+        { "name": "Interior Finishing", "percent": 0, "status": "Pending" },
+        { "name": "Final Handover", "percent": 0, "status": "Pending" }
+      ]
+    },
+    {
+      "code": "BSP-2024-03",
+      "clientName": "Dr. Ramesh Babu",
+      "projectTitle": "Amaravati Lakeview Duplex",
+      "location": "Tadepalli, Amaravati",
+      "type": "Luxury Duplex (G+1)",
+      "totalSqFt": "3,600 Sq.Ft",
+      "overallProgress": 95,
+      "status": "Final Finishing",
+      "lastUpdated": "2026-10-24",
+      "stages": [
+        { "name": "Earthwork & Foundation", "percent": 100, "status": "Completed" },
+        { "name": "RCC Structure", "percent": 100, "status": "Completed" },
+        { "name": "Brickwork & Plastering", "percent": 100, "status": "Completed" },
+        { "name": "Electrical & Plumbing", "percent": 100, "status": "Completed" },
+        { "name": "Flooring (Italian Marble)", "percent": 100, "status": "Completed" },
+        { "name": "Interior Woodwork & False Ceiling", "percent": 90, "status": "In Progress" },
+        { "name": "Exterior Paint & Landscaping", "percent": 85, "status": "In Progress" },
+        { "name": "Handover & 15-Yr Warranty Certificate", "percent": 0, "status": "Scheduled" }
+      ]
+    }
+  ],
+  "enquiries": [
+    {
+      "id": "enq-101",
+      "name": "P. Sudhakar",
+      "phone": "+91 98480 12345",
+      "email": "sudhakar.p@gmail.com",
+      "projectType": "Residential Construction",
+      "location": "Mangalagiri, Guntur",
+      "approxArea": "3,200 sq.ft",
+      "message": "Looking to construct a G+1 independent duplex home. Need architectural plan and complete civil construction estimate.",
+      "estimatedCost": "₹60 - ₹75 Lakhs",
+      "status": "NEW",
+      "createdAt": "2026-10-24T10:15:00.000Z"
+    },
+    {
+      "id": "enq-102",
+      "name": "B. Madhusudhan Rao",
+      "phone": "+91 94401 56789",
+      "email": "bmrao.vij@outlook.com",
+      "projectType": "Commercial Construction",
+      "location": "Governorpet, Vijayawada",
+      "approxArea": "6,500 sq.ft",
+      "message": "We have an open commercial plot. Need structural engineering drawings and turnkey construction quote from BuildSphere.",
+      "estimatedCost": "₹1.4 - ₹1.7 Crores",
+      "status": "CONTACTED",
+      "createdAt": "2026-10-23T16:30:00.000Z"
+    }
+  ],
+  "admin": {
+    "username": "admin",
+    "passwordHash": "buildsphere2024"
+  }
+}
