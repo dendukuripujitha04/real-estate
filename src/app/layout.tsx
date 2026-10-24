@@ -38,7 +38,8 @@ export const metadata: Metadata = {
     images: ['/images/hero-bg.jpg'],
   },
   icons: {
-    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230f192c'/><circle cx='50' cy='50' r='32' fill='none' stroke='%23f59e0b' stroke-width='8'/><path d='M30 65 L50 35 L70 65 Z' fill='%23f59e0b'/></svg>",
+    icon: '/images/logo.png',
+    apple: '/images/logo.png',
   },
 };
 

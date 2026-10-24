@@ -20,11 +20,15 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAdmin, onOpenConsultation 
         <div className="footer-grid">
           <div className="footer-about">
             <div className="brand-logo" style={{ marginBottom: '14px' }}>
-              <div className="brand-icon">
-                <i className="fa fa-cubes"></i>
+              <div className="brand-logo-img-box footer-logo-box">
+                <img
+                  src="/images/logo.png"
+                  alt="BuildSphere Infra & Engineering Logo"
+                  className="brand-logo-img"
+                />
               </div>
               <div className="brand-text">
-                <span className="brand-title" style={{ fontSize: '1.05rem' }}>
+                <span className="brand-title" style={{ fontSize: '1.15rem' }}>
                   BUILDSPHERE
                 </span>
                 <span className="brand-subtitle">Infra &amp; Engineering Works</span>

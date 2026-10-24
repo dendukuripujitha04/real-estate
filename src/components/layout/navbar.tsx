@@ -58,8 +58,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
           id="nav-brand-logo"
           onClick={(e) => handleNavLinkClick(e, '#home')}
         >
-          <div className="brand-icon">
-            <i className="fa fa-cubes"></i>
+          <div className="brand-logo-img-box">
+            <img
+              src="/images/logo.png"
+              alt="BuildSphere Infra & Engineering Logo"
+              className="brand-logo-img"
+            />
           </div>
           <div className="brand-text">
             <span className="brand-title">BUILDSPHERE</span>
