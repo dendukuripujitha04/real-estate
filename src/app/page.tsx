@@ -5,6 +5,7 @@ import { TopBar } from '@/components/layout/top-bar';
 import { Navbar } from '@/components/layout/navbar';
 import { Footer } from '@/components/layout/footer';
 import { MobileStickyBar } from '@/components/layout/mobile-sticky-bar';
+import { SplashScreen } from '@/components/layout/splash-screen';
 
 import { HeroSection } from '@/components/sections/hero';
 import { StatsSection } from '@/components/sections/stats';
@@ -331,6 +332,9 @@ export default function HomePage() {
 
   return (
     <>
+      {/* Advanced 4-Second Architectural Splash Screen */}
+      <SplashScreen durationMs={4000} />
+
       {/* Top Direct Verified Contact Info Bar */}
       <TopBar />
 
