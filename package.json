@@ -1,8 +1,7 @@
 {
-  "name": "buildsphere-platform",
+  "name": "ss-global-constructions",
   "version": "1.0.0",
-  "description": "BuildSphere Infra & Engineering - Premium Construction & Engineering Web Platform",
-  "main": "server.js",
+  "description": "SS Global Constructions and Interior Works - Premium Construction & Engineering Web Platform",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

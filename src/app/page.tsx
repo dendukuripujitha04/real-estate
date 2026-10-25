@@ -278,7 +278,7 @@ export default function HomePage() {
       />
 
       {/* Mobile Sticky Bottom Call & WhatsApp Bar */}
-      <MobileStickyBar />
+      <MobileStickyBar onOpenConsultation={handleOpenConsultation} />
 
       {/* Floating Action Buttons (AI Assistant & WhatsApp) */}
       <FloatingActions onToggleAi={() => setIsAiOpen(!isAiOpen)} />
