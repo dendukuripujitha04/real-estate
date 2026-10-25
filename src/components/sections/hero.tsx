@@ -9,6 +9,15 @@ interface HeroProps {
   onOpenConsultation: (service?: string) => void;
 }
 
+const POPULAR_LOCATIONS = [
+  'Currency Nagar',
+  'Ramavarappadu',
+  'Poranki',
+  'Benz Circle',
+  'Tadepalli',
+  'Gannavaram',
+];
+
 export const HeroSection: React.FC<HeroProps> = ({ onOpenConsultation }) => {
   const { language, t } = useLanguage();
   const isTe = language === 'te';
@@ -25,7 +34,9 @@ export const HeroSection: React.FC<HeroProps> = ({ onOpenConsultation }) => {
     if (!name.trim() || !phone.trim()) {
       setStatusMsg({
         type: 'error',
-        text: isTe ? 'దయచేసి మీ పేరు మరియు ఫోన్ నంబర్ నమోదు చేయండి.' : 'Please provide your name and phone number.',
+        text: isTe
+          ? 'దయచేసి మీ పేరు మరియు ఫోన్ నంబర్ నమోదు చేయండి.'
+          : 'Please provide your name and phone number.',
       });
       return;
     }
@@ -74,121 +85,217 @@ export const HeroSection: React.FC<HeroProps> = ({ onOpenConsultation }) => {
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const scrollToVideo = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const el = document.getElementById('video-tour');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <section className="hero" id="home">
+    <section className="hero hero-advanced" id="home">
+      {/* Ambient Animated Background Mesh & Grid */}
+      <div className="hero-ambient-aura hero-aura-1" aria-hidden="true" />
+      <div className="hero-ambient-aura hero-aura-2" aria-hidden="true" />
+      <div className="hero-blueprint-grid" aria-hidden="true" />
+
       <div className="container hero-grid">
-        {/* Left Column: Brand Hero Text & Credentials */}
+        {/* Left Column: Premium Architectural Brand Presentation */}
         <div className="hero-content">
-          {/* Experience Badge Pill */}
-          <div className="hero-badge-pill">
-            <span className="dot"></span>
-            <span>{t.hero.badge}</span>
-          </div>
-
-          {/* Main Brand Title Strip */}
-          <div className="hero-brand-name-strip">
-            <span className="hero-brand-primary">SS GLOBAL</span>
-            <span className="hero-brand-secondary">CONSTRUCTIONS AND INTERIOR WORKS</span>
-          </div>
-
-          {/* Main Headline */}
-          <h1 className="hero-headline">
-            {t.hero.headline}{' '}
-            <span className="highlight">{t.hero.headlineHighlight}</span>
-          </h1>
-
-          {/* Tagline Strip */}
-          <div className="hero-brand-tagline-bar">
-            <span className="tagline-core">
-              <i className="fa fa-gem"></i> {COMPANY_CONTACT.tagline}
-            </span>
-            <span className="tagline-support hide-on-mobile">
-              • {COMPANY_CONTACT.supportingTagline}
-            </span>
-          </div>
-
-          {/* Supporting Pitch */}
-          <p className="hero-supporting">{t.hero.subheadline}</p>
-
-          {/* Highlight Telugu Quote Box */}
-          <div className="hero-quote-callout">
-            <i className="fa fa-quote-left quote-icon"></i>
-            <div>
-              <p className="quote-text-primary">
-                &ldquo;{COMPANY_CONTACT.teluguPromo1}&rdquo;
-              </p>
-              <p className="quote-text-secondary">
-                {COMPANY_CONTACT.teluguPromo4}
-              </p>
+          {/* Top Status & Verification Pill */}
+          <div className="hero-live-pill-group">
+            <div className="hero-badge-pill hero-badge-glow">
+              <span className="dot pulse-emerald" />
+              <span>
+                {isTe
+                  ? 'విజయవాడ & అమరావతిలో కొత్త ప్రాజెక్ట్‌లు స్వీకరించబడుతున్నాయి'
+                  : 'Booking Open for Villas, Homes & Turnkey Interiors'}
+              </span>
+            </div>
+            <div className="hero-badge-pill hero-badge-gold-subtle hide-on-mobile">
+              <i className="fa fa-award" style={{ color: 'var(--accent-gold)' }} />
+              <span>{t.hero.trustYears}</span>
             </div>
           </div>
 
-          {/* CTAs Group */}
-          <div className="hero-cta-group">
+          {/* Official Brand Identity Monogram Banner */}
+          <div className="hero-brand-monogram-box">
+            <div className="hero-brand-crest">
+              <img src="/logo.png" alt="SS Global Monogram" className="hero-crest-img" />
+            </div>
+            <div className="hero-brand-text-block">
+              <span className="hero-brand-title-lead">SS GLOBAL</span>
+              <span className="hero-brand-subtitle-lead">CONSTRUCTIONS AND INTERIOR WORKS</span>
+              <span className="hero-brand-slogan-lead">
+                From Foundation to Finishing • Choice Is Yours...
+              </span>
+            </div>
+          </div>
+
+          {/* Master Architectural Headline */}
+          <h1 className="hero-headline hero-headline-advanced">
+            {isTe ? (
+              <>
+                మీ కలల ఇంటి నిర్మాణం &amp; ఇంటీరియర్స్{' '}
+                <span className="highlight-shimmer">నాణ్యత మరియు విశ్వసనీయతతో</span>
+              </>
+            ) : (
+              <>
+                Building Architectural Legacies with{' '}
+                <span className="highlight-shimmer">Uncompromising Quality &amp; Trust</span>
+              </>
+            )}
+          </h1>
+
+          {/* Subtitle / Core Value Proposition */}
+          <p className="hero-supporting hero-supporting-advanced">
+            {isTe
+              ? 'పునాది తవ్వకం నుండి తాళం చెవుల అప్పగింత వరకు, 20+ సంవత్సరాల ఆన్-గ్రౌండ్ ఇంజనీరింగ్ అనుభవంతో మీ ఇంటిని పటిష్టంగా మరియు అద్భుతంగా నిర్మిస్తాం.'
+              : 'From earthwork foundation to luxury turnkey interiors. Delivering 20+ years of steadfast craftsmanship, 100% Vasthu harmony, and single-window accountability across Vijayawada & Andhra Pradesh.'}
+          </p>
+
+          {/* Telugu Heritage Emotional Quote Card */}
+          <div className="hero-quote-card-modern">
+            <div className="hero-quote-icon-bubble">
+              <i className="fa fa-quote-left" />
+            </div>
+            <div className="hero-quote-text-wrap">
+              <p className="quote-telugu-primary">
+                &ldquo;{COMPANY_CONTACT.teluguPromo1}&rdquo;
+              </p>
+              <div className="quote-telugu-footer">
+                <span className="quote-telugu-accent">{COMPANY_CONTACT.teluguPromo4}</span>
+                <span className="quote-tag-badge">విజయవాడ స్పెషలిస్ట్స్</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Interactive Feature Pills */}
+          <div className="hero-feature-chips">
+            <div className="feature-chip" onClick={() => onOpenConsultation('Complete House Construction')}>
+              <i className="fa fa-home" />
+              <span>Complete House Construction</span>
+            </div>
+            <div className="feature-chip" onClick={() => onOpenConsultation('Villa Construction')}>
+              <i className="fa fa-crown" />
+              <span>Luxury Duplex Villas</span>
+            </div>
+            <div className="feature-chip" onClick={() => onOpenConsultation('Interior Design and Execution')}>
+              <i className="fa fa-couch" />
+              <span>Turnkey Modular Interiors</span>
+            </div>
+            <div className="feature-chip" onClick={() => onOpenConsultation('Kitchen Renovation')}>
+              <i className="fa fa-compass" />
+              <span>100% Vasthu Compliant</span>
+            </div>
+          </div>
+
+          {/* High-Converting CTA Action Group */}
+          <div className="hero-cta-group hero-cta-group-advanced">
             <button
-              className="btn btn-primary open-consultation-btn"
+              className="btn btn-primary hero-btn-main btn-glow"
               id="hero-btn-consultation"
               onClick={() => onOpenConsultation('Full Project Consultation')}
             >
-              <i className="fa fa-clipboard-list"></i> {t.hero.ctaConsultation}
+              <i className="fa fa-clipboard-check" />
+              <span>{t.hero.ctaConsultation}</span>
+              <i className="fa fa-arrow-right hero-btn-arrow" />
             </button>
+
             <a
-              href="#projects"
-              className="btn btn-secondary"
-              id="hero-btn-projects"
-              onClick={scrollToProjects}
+              href="#video-tour"
+              className="btn btn-secondary hero-btn-video"
+              id="hero-btn-video-tour"
+              onClick={scrollToVideo}
             >
-              <i className="fa fa-building"></i> {t.hero.ctaProjects}
+              <span className="video-play-pulse">
+                <i className="fa fa-play" />
+              </span>
+              <span>Watch Video Tour</span>
             </a>
+
             <a
               href={`tel:${COMPANY_CONTACT.phoneRaw}`}
               className="btn btn-outline-gold hero-call-direct-btn"
               id="hero-btn-call"
+              title="Call Director Directly"
             >
-              <i className="fa fa-phone-alt"></i> {COMPANY_CONTACT.phone}
+              <i className="fa fa-phone-alt" />
+              <span>{COMPANY_CONTACT.phone}</span>
             </a>
           </div>
 
-          {/* Trust Highlights Badges */}
-          <div className="hero-trust-badges">
-            <div className="trust-item">
-              <i className="fa fa-award"></i>
-              <span>{t.hero.trustYears}</span>
+          {/* Verified Trust Stats Ribbon */}
+          <div className="hero-trust-ribbon">
+            <div className="trust-ribbon-item">
+              <span className="trust-ribbon-num">20+</span>
+              <span className="trust-ribbon-label">Years Field Experience</span>
             </div>
-            <div className="trust-item">
-              <i className="fa fa-hammer"></i>
-              <span>{t.hero.trustFinishing}</span>
+            <div className="trust-ribbon-divider" />
+            <div className="trust-ribbon-item">
+              <span className="trust-ribbon-num">350+</span>
+              <span className="trust-ribbon-label">Happy Homeowners</span>
             </div>
-            <div className="trust-item">
-              <i className="fa fa-hand-holding-heart"></i>
-              <span>{t.hero.trustChoice}</span>
+            <div className="trust-ribbon-divider" />
+            <div className="trust-ribbon-item">
+              <span className="trust-ribbon-num">15</span>
+              <span className="trust-ribbon-label">In-House Services</span>
             </div>
-            <div className="trust-item">
-              <i className="fa fa-layer-group"></i>
-              <span>{t.hero.trustMaterials}</span>
+            <div className="trust-ribbon-divider" />
+            <div className="trust-ribbon-item">
+              <span className="trust-ribbon-num">100%</span>
+              <span className="trust-ribbon-label">Foundation to Finishing</span>
             </div>
           </div>
         </div>
 
-        {/* Right Column: High-Converting Quick Consultation Form Card */}
-        <div className="hero-card">
-          <div className="hero-card-header">
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-              <div className="hero-card-logo-mini">
-                <img src="/logo.png" alt="SS Logo" />
+        {/* Right Column: Ultra-Modern Glassmorphic Engineering Hub Card */}
+        <div className="hero-card hero-card-advanced">
+          {/* Card Ambient Header */}
+          <div className="hero-card-header hero-card-header-advanced">
+            <div className="hero-card-header-left">
+              <div className="hero-card-avatar-wrap">
+                <img src="/logo.png" alt="SS Logo" className="hero-card-avatar-img" />
+                <span className="avatar-online-dot" />
               </div>
               <div>
-                <h3 className="hero-card-title">
-                  <i className="fa fa-calendar-check"></i> {t.hero.cardTitle}
-                </h3>
-                <p className="hero-card-subtitle">{t.hero.cardSubtitle}</p>
+                <div className="hero-card-top-tag">
+                  <i className="fa fa-bolt" /> {isTe ? 'ఉచిత సైట్ విజిట్' : 'DIRECT DESK'}
+                </div>
+                <h3 className="hero-card-title">{t.hero.cardTitle}</h3>
+                <p className="hero-card-subtitle">
+                  {isTe
+                    ? 'విజయవాడ & అమరావతిలో మా సీనియర్ ఇంజనీరింగ్ బృందంతో నేరుగా మాట్లాడండి'
+                    : 'Get detailed itemized estimate & site inspection within 24 hours'}
+                </p>
               </div>
             </div>
           </div>
 
-          <form className="quick-calc-form" onSubmit={handleQuickSubmit}>
-            <div className="form-group">
-              <label htmlFor="hero-name">{t.hero.nameLabel}</label>
+          {/* Quick-Pick Location Pills */}
+          <div className="hero-location-pills-bar">
+            <span className="pills-label">
+              <i className="fa fa-map-marker-alt" /> {isTe ? 'ప్రాంతం ఎంచుకోండి:' : 'Quick Select Area:'}
+            </span>
+            <div className="pills-scroll-wrap">
+              {POPULAR_LOCATIONS.map((loc) => (
+                <button
+                  type="button"
+                  key={loc}
+                  className={`quick-loc-pill ${location === loc ? 'active' : ''}`}
+                  onClick={() => setLocation(loc)}
+                >
+                  {loc}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* High-Converting Form */}
+          <form className="quick-calc-form hero-form-advanced" onSubmit={handleQuickSubmit}>
+            <div className="form-group-floating">
+              <label htmlFor="hero-name">
+                <i className="fa fa-user" /> {t.hero.nameLabel}
+              </label>
               <input
                 type="text"
                 id="hero-name"
@@ -199,8 +306,10 @@ export const HeroSection: React.FC<HeroProps> = ({ onOpenConsultation }) => {
               />
             </div>
 
-            <div className="form-group">
-              <label htmlFor="hero-phone">{t.hero.phoneLabel}</label>
+            <div className="form-group-floating">
+              <label htmlFor="hero-phone">
+                <i className="fa fa-phone" /> {t.hero.phoneLabel}
+              </label>
               <input
                 type="tel"
                 id="hero-phone"
@@ -211,46 +320,70 @@ export const HeroSection: React.FC<HeroProps> = ({ onOpenConsultation }) => {
               />
             </div>
 
-            <div className="form-group">
-              <label htmlFor="hero-project-type">{t.hero.serviceLabel}</label>
-              <select
-                id="hero-project-type"
-                value={projectType}
-                onChange={(e) => setProjectType(e.target.value)}
-              >
-                {ALL_SERVICES.map((s) => (
-                  <option key={s.id} value={s.titleEn}>
-                    {isTe ? s.titleTe : s.titleEn}
-                  </option>
-                ))}
-              </select>
+            <div className="form-row-2col">
+              <div className="form-group-floating">
+                <label htmlFor="hero-project-type">
+                  <i className="fa fa-hard-hat" /> {t.hero.serviceLabel}
+                </label>
+                <select
+                  id="hero-project-type"
+                  value={projectType}
+                  onChange={(e) => setProjectType(e.target.value)}
+                >
+                  {ALL_SERVICES.map((s) => (
+                    <option key={s.id} value={s.titleEn}>
+                      {isTe ? s.titleTe : s.titleEn}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="form-group-floating">
+                <label htmlFor="hero-location">
+                  <i className="fa fa-map-pin" /> {t.hero.locationLabel}
+                </label>
+                <input
+                  type="text"
+                  id="hero-location"
+                  placeholder={
+                    isTe ? 'ఉదా: కరెన్సీ నగర్, పోరంకి' : 'e.g. Currency Nagar, Poranki'
+                  }
+                  value={location}
+                  onChange={(e) => setLocation(e.target.value)}
+                />
+              </div>
             </div>
 
-            <div className="form-group">
-              <label htmlFor="hero-location">{t.hero.locationLabel}</label>
-              <input
-                type="text"
-                id="hero-location"
-                placeholder={isTe ? 'ఉదా: కరెన్సీ నగర్, రామవరప్పాడు, పోరంకి' : 'e.g. Currency Nagar, Ramavarappadu, Poranki'}
-                value={location}
-                onChange={(e) => setLocation(e.target.value)}
-              />
+            {/* Inclusions Guarantee Strip */}
+            <div className="hero-form-inclusions">
+              <div className="inclusion-item">
+                <i className="fa fa-check-circle" />
+                <span>Zero Hidden Costs</span>
+              </div>
+              <div className="inclusion-item">
+                <i className="fa fa-check-circle" />
+                <span>Free Vasthu Audit</span>
+              </div>
+              <div className="inclusion-item">
+                <i className="fa fa-check-circle" />
+                <span>Transparent Materials</span>
+              </div>
             </div>
 
             <button
               type="submit"
-              className="btn btn-primary btn-block btn-sm"
+              className="btn btn-primary btn-block hero-submit-btn"
               id="hero-btn-submit-quick"
               disabled={loading}
-              style={{ marginTop: '16px' }}
             >
               {loading ? (
                 <>
-                  <i className="fa fa-spinner fa-spin"></i> Submitting...
+                  <i className="fa fa-spinner fa-spin" /> Submitting Request...
                 </>
               ) : (
                 <>
-                  <i className="fa fa-paper-plane"></i> {t.hero.submitBtn}
+                  <i className="fa fa-paper-plane" />
+                  <span>{t.hero.submitBtn}</span>
                 </>
               )}
             </button>
@@ -263,11 +396,11 @@ export const HeroSection: React.FC<HeroProps> = ({ onOpenConsultation }) => {
                   marginTop: '12px',
                   fontSize: '0.85rem',
                   padding: '10px 14px',
-                  borderRadius: '6px',
+                  borderRadius: '8px',
                   background:
                     statusMsg.type === 'success'
-                      ? 'rgba(16, 185, 129, 0.18)'
-                      : 'rgba(239, 68, 68, 0.18)',
+                      ? 'rgba(16, 185, 129, 0.2)'
+                      : 'rgba(239, 68, 68, 0.2)',
                   border: `1px solid ${
                     statusMsg.type === 'success' ? '#10b981' : '#ef4444'
                   }`,
@@ -280,18 +413,19 @@ export const HeroSection: React.FC<HeroProps> = ({ onOpenConsultation }) => {
             )}
           </form>
 
-          {/* Direct WhatsApp Prompt in Hero Card */}
-          <div className="hero-card-footer-direct">
-            <span style={{ fontSize: '0.8rem', color: '#94a3b8' }}>
-              Prefer instant chat?
+          {/* Direct Instant WhatsApp Strip */}
+          <div className="hero-card-footer-advanced">
+            <span className="hero-footer-divider-text">
+              <span>OR CONNECT INSTANTLY</span>
             </span>
             <a
               href={COMPANY_CONTACT.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="hero-card-wa-link"
+              className="hero-whatsapp-direct-btn"
             >
-              <i className="fab fa-whatsapp"></i> Chat on WhatsApp (9494502777)
+              <i className="fab fa-whatsapp" />
+              <span>Chat with Chief Engineer on WhatsApp (9494502777)</span>
             </a>
           </div>
         </div>
