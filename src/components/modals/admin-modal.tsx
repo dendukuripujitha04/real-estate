@@ -124,7 +124,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
       title={
         <h3>
           <i className="fa fa-user-shield" style={{ color: 'var(--accent-gold)' }}></i>{' '}
-          BuildSphere Management Portal
+          SS Global Management Portal
         </h3>
       }
       maxWidth="920px"
@@ -201,7 +201,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                 </div>
               </div>
               <p style={{ fontSize: '0.85rem', color: '#64748b', lineHeight: 1.6 }}>
-                Welcome to the BuildSphere management system. Here you can monitor project enquiries received from the website and update enquiry status (NEW, CONTACTED, IN PROGRESS, COMPLETED) in real time.
+                Welcome to the SS Global management system. Here you can monitor project enquiries received from the website and update enquiry status (NEW, CONTACTED, IN PROGRESS, COMPLETED) in real time.
               </p>
             </div>
           )}

@@ -85,6 +85,12 @@ export const HeroSection: React.FC<HeroProps> = ({ onOpenConsultation }) => {
             <span>{t.hero.badge}</span>
           </div>
 
+          {/* Main Brand Title Strip */}
+          <div className="hero-brand-name-strip">
+            <span className="hero-brand-primary">SS GLOBAL</span>
+            <span className="hero-brand-secondary">CONSTRUCTIONS AND INTERIOR WORKS</span>
+          </div>
+
           {/* Main Headline */}
           <h1 className="hero-headline">
             {t.hero.headline}{' '}

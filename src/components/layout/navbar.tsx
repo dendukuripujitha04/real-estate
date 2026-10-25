@@ -70,7 +70,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
           </div>
           <div className="brand-text">
             <span className="brand-title">SS GLOBAL</span>
-            <span className="brand-subtitle">Constructions &amp; Interior Works</span>
+            <span className="brand-subtitle">CONSTRUCTIONS AND INTERIOR WORKS</span>
           </div>
         </a>
 

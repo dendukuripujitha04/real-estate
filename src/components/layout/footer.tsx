@@ -33,10 +33,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAdmin, onOpenConsultation 
                 />
               </div>
               <div className="brand-text">
-                <span className="brand-title" style={{ fontSize: '1.15rem' }}>
+                <span className="brand-title" style={{ fontSize: '1.25rem' }}>
                   SS GLOBAL
                 </span>
-                <span className="brand-subtitle">Constructions &amp; Interior Works</span>
+                <span className="brand-subtitle">CONSTRUCTIONS AND INTERIOR WORKS</span>
               </div>
             </div>
 

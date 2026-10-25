@@ -59,7 +59,7 @@ export async function POST(req: NextRequest) {
       {
         success: true,
         message:
-          'Thank you! Your enquiry has been received. The BuildSphere engineering team will contact you soon.',
+          'Thank you! Your enquiry has been received. The SS Global engineering team will contact you soon.',
         enquiryId: newEnquiry.id,
       },
       { status: 201 }

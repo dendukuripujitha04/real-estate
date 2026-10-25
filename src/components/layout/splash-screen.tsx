@@ -111,7 +111,7 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({
 
         {/* Brand Titles */}
         <h1 className="splash-brand-title">SS GLOBAL</h1>
-        <div className="splash-brand-sub">Constructions &amp; Interior Works</div>
+        <div className="splash-brand-sub">CONSTRUCTIONS AND INTERIOR WORKS</div>
         <p className="splash-motto">&quot;{COMPANY_CONTACT.tagline}&quot;</p>
         <p style={{ fontSize: '0.8rem', color: 'var(--accent-gold)', marginTop: '4px', letterSpacing: '1px' }}>
           20+ YEARS EXPERIENCE • VIJAYAWADA

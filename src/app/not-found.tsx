@@ -38,7 +38,7 @@ export default function NotFound() {
         Page Not Found
       </h2>
       <p style={{ maxWidth: '480px', color: '#94a3b8', marginBottom: '28px' }}>
-        The architectural page or resource you are looking for does not exist or has been relocated within the BuildSphere portal.
+        The architectural page or resource you are looking for does not exist or has been relocated within the SS Global website.
       </p>
       <Link
         href="/"

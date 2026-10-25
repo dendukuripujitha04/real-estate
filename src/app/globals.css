@@ -326,22 +326,59 @@ h1, h2, h3, h4, h5, h6 {
 .brand-text {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .brand-title {
   font-family: var(--font-heading);
-  font-size: 1.18rem;
-  font-weight: 800;
+  font-size: 1.28rem;
+  font-weight: 900;
   color: #ffffff;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
   line-height: 1.1;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .brand-subtitle {
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 1.5px;
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 1.6px;
   color: var(--accent-gold);
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-top: 2px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero-brand-name-strip {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(15, 23, 42, 0.7) 100%);
+  border: 1.5px solid rgba(245, 158, 11, 0.45);
+  border-radius: 8px;
+  padding: 8px 18px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25), 0 0 15px rgba(245, 158, 11, 0.15);
+  backdrop-filter: blur(8px);
+}
+
+.hero-brand-primary {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.hero-brand-secondary {
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--accent-gold);
+  letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 

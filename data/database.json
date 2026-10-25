@@ -64,7 +64,7 @@
       "tag": "Villas & Homes",
       "image": "/images/residential.jpg",
       "shortDesc": "Independent luxury villas, duplex homes, and multi-floor residential apartments built with reinforced structural strength.",
-      "fullDesc": "From custom architectural planning to final turnkey finishing, BuildSphere designs and builds high-quality residential houses tailored to your family's lifestyle and budget, strictly adhering to Vasthu principles and IS building codes.",
+      "fullDesc": "From custom architectural planning to final turnkey finishing, SS Global designs and builds high-quality residential houses tailored to your family's lifestyle and budget, strictly adhering to Vasthu principles and IS building codes.",
       "features": [
         "Independent Luxury Villas & Duplexes",
         "Residential G+1, G+2 & Multi-Story Buildings",
@@ -81,7 +81,7 @@
       "tag": "Offices & Retail",
       "image": "/images/commercial.jpg",
       "shortDesc": "Modern commercial complexes, corporate offices, retail spaces, and showrooms engineered for maximum utility and aesthetics.",
-      "fullDesc": "We construct modern commercial properties designed for business longevity. With BuildSphere's in-house structural engineering team, we ensure expansive column-free layouts, high-load capacities, fire safety norms, and rapid project delivery.",
+      "fullDesc": "We construct modern commercial properties designed for business longevity. With SS Global's in-house structural engineering team, we ensure expansive column-free layouts, high-load capacities, fire safety norms, and rapid project delivery.",
       "features": [
         "Commercial Complexes & Shopping Centers",
         "Corporate Headquarters & IT Office Spaces",
@@ -112,7 +112,7 @@
     {
       "id": "structural",
       "title": "Structural Design",
-      "tag": "BuildSphere Engineering",
+      "tag": "SS Global Engineering",
       "image": "/images/structural.jpg",
       "shortDesc": "Earthquake-resistant structural engineering, soil-specific foundation designs, beam-column detailing, and stability certificates.",
       "fullDesc": "Our in-house structural engineering team delivers mathematically sound, seismically resilient designs. Every footing, column, and slab is calculated with precision to withstand heavy loads and harsh environmental conditions.",
@@ -149,7 +149,7 @@
       "tag": "Modernization & Remodeling",
       "image": "/images/hero-bg.jpg",
       "shortDesc": "Complete home transformation, structural retrofitting, modern facade facelifts, floor additions, and waterproofing solutions.",
-      "fullDesc": "Breathe new life into aging buildings. Whether you need an exterior makeover, adding additional floors, structural strengthening, or solving persistent dampness with advanced waterproofing, BuildSphere delivers hassle-free renovation.",
+      "fullDesc": "Breathe new life into aging buildings. Whether you need an exterior makeover, adding additional floors, structural strengthening, or solving persistent dampness with advanced waterproofing, SS Global delivers hassle-free renovation.",
       "features": [
         "Complete Home & Commercial Remodeling",
         "Structural Retrofitting & Column Jacketing",
@@ -164,7 +164,7 @@
   "projects": [
     {
       "id": "proj-1",
-      "title": "BuildSphere Royal Villa",
+      "title": "SS Global Royal Villa",
       "category": "residential",
       "categoryLabel": "Residential",
       "location": "Poranki, Vijayawada",
@@ -254,7 +254,7 @@
     },
     {
       "id": "proj-5",
-      "title": "BuildSphere Multi-Tier Framework",
+      "title": "SS Global Multi-Tier Framework",
       "category": "structural",
       "categoryLabel": "Structural Engineering",
       "location": "Gannavaram Highway, Krishna District",
@@ -262,7 +262,7 @@
       "year": "2024",
       "status": "Ongoing",
       "image": "/images/structural.jpg",
-      "description": "Heavy industrial and warehouse reinforced concrete framing engineered by BuildSphere Engineering with deep pile foundations and vibration damping.",
+      "description": "Heavy industrial and warehouse reinforced concrete framing engineered by SS Global Engineering with deep pile foundations and vibration damping.",
       "servicesProvided": [
         "Soil Investigation Analysis",
         "Structural Detailing",
@@ -364,7 +364,7 @@
       "location": "Poranki, Vijayawada",
       "project": "Residential Villa (G+2)",
       "rating": 5,
-      "text": "Building a home is once in a lifetime, and choosing BuildSphere was the best decision. Their milestone payment model gave us immense peace of mind. The structural engineering is solid and the finishing is top notch. Highly recommended!"
+      "text": "Building a home is once in a lifetime, and choosing SS Global was the best decision. Their milestone payment model gave us immense peace of mind. The structural engineering is solid and the finishing is top notch. Highly recommended!"
     },
     {
       "id": "test-2",
@@ -373,7 +373,7 @@
       "location": "Ramavarapadu, Vijayawada",
       "project": "Commercial Complex (16,000 Sq.Ft)",
       "rating": 5,
-      "text": "BuildSphere delivered our commercial complex 3 weeks ahead of schedule. Their transparency in material specifications—from Vizag Steel to UltraTech cement—was 100% genuine. The team handles government approvals and site supervision with complete professionalism."
+      "text": "SS Global delivered our commercial complex 3 weeks ahead of schedule. Their transparency in material specifications—from Vizag Steel to UltraTech cement—was 100% genuine. The team handles government approvals and site supervision with complete professionalism."
     },
     {
       "id": "test-3",
@@ -452,9 +452,9 @@
   },
   "projectProgress": [
     {
-      "code": "BSP-2024-01",
+      "code": "SSG-2024-01",
       "clientName": "Sri K. V. Rao",
-      "projectTitle": "BuildSphere Elite Residence",
+      "projectTitle": "SS Global Elite Residence",
       "location": "Poranki, Vijayawada",
       "type": "Residential Villa (G+2)",
       "totalSqFt": "4,200 Sq.Ft",
@@ -646,7 +646,7 @@
       "projectType": "Commercial Construction",
       "location": "Governorpet, Vijayawada",
       "approxArea": "6,500 sq.ft",
-      "message": "We have an open commercial plot. Need structural engineering drawings and turnkey construction quote from BuildSphere.",
+      "message": "We have an open commercial plot. Need structural engineering drawings and turnkey construction quote from SS Global.",
       "estimatedCost": "₹1.4 - ₹1.7 Crores",
       "status": "CONTACTED",
       "createdAt": "2026-10-23T16:30:00.000Z"

@@ -138,7 +138,7 @@ export const VideoShowcaseSection: React.FC<VideoShowcaseProps> = ({ onOpenConsu
         {/* Section Header */}
         <div className="text-center" style={{ marginBottom: '40px' }}>
           <div className="section-tag light">
-            <i className="fa fa-play-circle"></i> EXPERIENCE BUILDSPHERE IN ACTION
+            <i className="fa fa-play-circle"></i> EXPERIENCE SS GLOBAL IN ACTION
           </div>
           <h2 className="section-title" style={{ color: '#ffffff' }}>
             Live Architectural &amp; Engineering Showcase
@@ -167,7 +167,7 @@ export const VideoShowcaseSection: React.FC<VideoShowcaseProps> = ({ onOpenConsu
               </div>
               <div className="cinema-monitor-title">
                 <i className="fa fa-film" style={{ color: 'var(--accent-gold)' }}></i>
-                <span>BuildSphere Studio • Live Project Video Tour</span>
+                <span>SS Global Studio • Live Project Video Tour</span>
               </div>
               <div className="cinema-badges">
                 <span className="cinema-badge-quality">
