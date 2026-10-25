@@ -2,12 +2,17 @@
 
 import React, { useState } from 'react';
 import { submitEnquiryApi } from '@/services/api';
+import { ALL_SERVICES, COMPANY_CONTACT } from '@/constants';
+import { useLanguage } from '@/context/language-context';
 
 export const ContactForm: React.FC = () => {
+  const { language } = useLanguage();
+  const isTe = language === 'te';
+
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
-  const [projectType, setProjectType] = useState('Residential Construction');
+  const [projectType, setProjectType] = useState('Complete House Construction');
   const [location, setLocation] = useState('');
   const [approxArea, setApproxArea] = useState('');
   const [message, setMessage] = useState('');
@@ -33,7 +38,11 @@ export const ContactForm: React.FC = () => {
       if (res.success) {
         setFeedback({
           type: 'success',
-          text: res.message || 'Thank you! Your enquiry has been received. Our team will contact you soon.',
+          text:
+            res.message ||
+            (isTe
+              ? 'ధన్యవాదాలు! మీ వినతి అందింది. మా బృందం త్వరలో సంప్రదిస్తుంది.'
+              : 'Thank you! Your enquiry has been received. Our team will contact you soon.'),
         });
         setName('');
         setPhone('');
@@ -45,13 +54,17 @@ export const ContactForm: React.FC = () => {
       } else {
         setFeedback({
           type: 'error',
-          text: res.message || 'Please check your inputs and try again.',
+          text:
+            res.message ||
+            (isTe
+              ? 'దయచేసి వివరాలను సరిచూసి మళ్లీ ప్రయత్నించండి.'
+              : 'Please check your inputs and try again.'),
         });
       }
     } catch {
       setFeedback({
         type: 'error',
-        text: 'Server temporarily unavailable. Please call us directly at +91 81795 17373.',
+        text: `Server temporarily unavailable. Please call us directly at ${COMPANY_CONTACT.phone}.`,
       });
     } finally {
       setLoading(false);
@@ -62,24 +75,24 @@ export const ContactForm: React.FC = () => {
     <form id="main-contact-form" onSubmit={handleSubmit}>
       <div className="form-row">
         <div className="form-group">
-          <label htmlFor="contact-name">Full Name *</label>
+          <label htmlFor="contact-name">{isTe ? 'మీ పూర్తి పేరు *' : 'Full Name *'}</label>
           <input
             type="text"
             id="contact-name"
             name="name"
-            placeholder="Sri K. V. Sharma"
+            placeholder={isTe ? 'శ్రీ కె. వి. శర్మ' : 'Sri K. V. Sharma'}
             required
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
         </div>
         <div className="form-group">
-          <label htmlFor="contact-phone">Phone Number *</label>
+          <label htmlFor="contact-phone">{isTe ? 'మొబైల్ నంబర్ *' : 'Phone Number *'}</label>
           <input
             type="tel"
             id="contact-phone"
             name="phone"
-            placeholder="+91 98765 43210"
+            placeholder="+91 94945 02777"
             pattern="[0-9+\s-]{10,15}"
             required
             value={phone}
@@ -90,7 +103,7 @@ export const ContactForm: React.FC = () => {
 
       <div className="form-row">
         <div className="form-group">
-          <label htmlFor="contact-email">Email Address</label>
+          <label htmlFor="contact-email">{isTe ? 'ఇమెయిల్ అడ్రస్' : 'Email Address'}</label>
           <input
             type="email"
             id="contact-email"
@@ -101,37 +114,36 @@ export const ContactForm: React.FC = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="contact-type">Project Type</label>
+          <label htmlFor="contact-type">{isTe ? 'కావలసిన సేవ' : 'Service Required'}</label>
           <select
             id="contact-type"
             name="projectType"
             value={projectType}
             onChange={(e) => setProjectType(e.target.value)}
           >
-            <option value="Residential Construction">Residential Construction</option>
-            <option value="Commercial Construction">Commercial Construction</option>
-            <option value="Architectural Design">Architectural Design</option>
-            <option value="Structural Design">Structural Design</option>
-            <option value="Interior Design">Interior Design</option>
-            <option value="Building Renovation">Building Renovation</option>
+            {ALL_SERVICES.map((s) => (
+              <option key={s.id} value={s.titleEn}>
+                {isTe ? s.titleTe : s.titleEn}
+              </option>
+            ))}
           </select>
         </div>
       </div>
 
       <div className="form-row">
         <div className="form-group">
-          <label htmlFor="contact-location">Project Location</label>
+          <label htmlFor="contact-location">{isTe ? 'ప్రాజెక్ట్ లొకేషన్ / ప్రాంతం' : 'Project Location'}</label>
           <input
             type="text"
             id="contact-location"
             name="location"
-            placeholder="e.g. Vijayawada, Poranki, Tadepalli"
+            placeholder={isTe ? 'ఉదా: కరెన్సీ నగర్, రామవరప్పాడు, అమరావతి' : 'e.g. Currency Nagar, Ramavarappadu, Amaravati'}
             value={location}
             onChange={(e) => setLocation(e.target.value)}
           />
         </div>
         <div className="form-group">
-          <label htmlFor="contact-area">Approximate Area (Sq.Ft)</label>
+          <label htmlFor="contact-area">{isTe ? 'అంచనా వైశాల్యం (Sq.Ft)' : 'Approximate Area (Sq.Ft)'}</label>
           <input
             type="text"
             id="contact-area"
@@ -144,12 +156,12 @@ export const ContactForm: React.FC = () => {
       </div>
 
       <div className="form-group">
-        <label htmlFor="contact-message">Message / Specific Requirements</label>
+        <label htmlFor="contact-message">{isTe ? 'ప్రాజెక్ట్ వివరాలు / సందేశం' : 'Message / Specific Requirements'}</label>
         <textarea
           id="contact-message"
           name="message"
           rows={4}
-          placeholder="Tell us about your plot size, floors planned, or timeline..."
+          placeholder={isTe ? 'మీ ప్లాట్ సైజు, ఎన్ని అంతస్తులు కట్టాలనుకుంటున్నారు లేదా ప్రత్యేక అవసరాలు...' : 'Tell us about your plot size, floors planned, or specific interior needs...'}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         ></textarea>
@@ -167,7 +179,7 @@ export const ContactForm: React.FC = () => {
           </>
         ) : (
           <>
-            <i className="fa fa-paper-plane"></i> SEND ENQUIRY
+            <i className="fa fa-paper-plane"></i> {isTe ? 'SS గ్లోబల్‌కు ఎంక్వైరీ పంపండి' : 'SUBMIT ENQUIRY TO SS GLOBAL'}
           </>
         )}
       </button>

@@ -1,31 +1,72 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { formatINR } from '@/utils/format-currency';
-import { DEFAULT_ESTIMATOR_RATES } from '@/constants';
+import React, { useState } from 'react';
+import { submitEnquiryApi } from '@/services/api';
+import { COMPANY_CONTACT, ALL_SERVICES } from '@/constants';
+import { useLanguage } from '@/context/language-context';
 
 interface HeroProps {
   onOpenConsultation: (service?: string) => void;
 }
 
 export const HeroSection: React.FC<HeroProps> = ({ onOpenConsultation }) => {
-  const [calcType, setCalcType] = useState<'residential' | 'commercial' | 'renovation'>('residential');
-  const [calcArea, setCalcArea] = useState<number>(1800);
-  const [calcQuality, setCalcQuality] = useState<string>('standard');
-  const [estimatedVal, setEstimatedVal] = useState<string>('₹65.00 – ₹73.90 Lakhs');
+  const { language, t } = useLanguage();
+  const isTe = language === 'te';
 
-  useEffect(() => {
-    const ratesConfig = DEFAULT_ESTIMATOR_RATES;
-    const typeRates = ratesConfig[calcType] || ratesConfig.residential;
-    const tier = (typeRates as Record<string, { rate: number }>)[calcQuality] || { rate: 1950 };
-    const multiplier = 1.95;
-    const totalBuiltup = Math.round(calcArea * multiplier);
-    const baseCost = tier.rate * totalBuiltup;
-    const minCost = Math.round(baseCost * 0.95);
-    const maxCost = Math.round(baseCost * 1.08);
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [projectType, setProjectType] = useState('Complete House Construction');
+  const [location, setLocation] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [statusMsg, setStatusMsg] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
 
-    setEstimatedVal(`${formatINR(minCost)} – ${formatINR(maxCost)}`);
-  }, [calcType, calcArea, calcQuality]);
+  const handleQuickSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!name.trim() || !phone.trim()) {
+      setStatusMsg({
+        type: 'error',
+        text: isTe ? 'దయచేసి మీ పేరు మరియు ఫోన్ నంబర్ నమోదు చేయండి.' : 'Please provide your name and phone number.',
+      });
+      return;
+    }
+
+    setLoading(true);
+    setStatusMsg(null);
+
+    try {
+      const res = await submitEnquiryApi({
+        name,
+        phone,
+        projectType,
+        location: location || 'Vijayawada / Amaravati',
+        message: `Quick enquiry from SS Global Hero Card for ${projectType}`,
+      });
+
+      if (res.success) {
+        setStatusMsg({
+          type: 'success',
+          text: isTe
+            ? 'ధన్యవాదాలు! మీ వినతి అందింది. మా ఇంజనీరింగ్ బృందం త్వరలో సంప్రదిస్తుంది.'
+            : 'Thank you! Your request has been received. Our team will contact you shortly.',
+        });
+        setName('');
+        setPhone('');
+        setLocation('');
+      } else {
+        setStatusMsg({
+          type: 'error',
+          text: res.message || 'Submission failed. Please call 9494502777 directly.',
+        });
+      }
+    } catch {
+      setStatusMsg({
+        type: 'error',
+        text: 'Unable to submit right now. Please call +91 94945 02777 directly.',
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const scrollToProjects = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -33,33 +74,57 @@ export const HeroSection: React.FC<HeroProps> = ({ onOpenConsultation }) => {
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const scrollToEstimate = (e: React.MouseEvent) => {
-    e.preventDefault();
-    const el = document.getElementById('estimate');
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <section className="hero" id="home">
       <div className="container hero-grid">
+        {/* Left Column: Brand Hero Text & Credentials */}
         <div className="hero-content">
+          {/* Experience Badge Pill */}
           <div className="hero-badge-pill">
             <span className="dot"></span>
-            <span>ESTABLISHED 2004 • 20+ YEARS OF ENGINEERING TRUST</span>
+            <span>{t.hero.badge}</span>
           </div>
+
+          {/* Main Headline */}
           <h1 className="hero-headline">
-            BUILDING YOUR DREAMS WITH <span className="highlight">QUALITY &amp; TRUST</span>
+            {t.hero.headline}{' '}
+            <span className="highlight">{t.hero.headlineHighlight}</span>
           </h1>
-          <p className="hero-supporting">
-            Professional construction, architecture, structural engineering, interiors, and renovation solutions delivered with engineering precision across Vijayawada, Amaravati, Guntur, and Godavari districts.
-          </p>
+
+          {/* Tagline Strip */}
+          <div className="hero-brand-tagline-bar">
+            <span className="tagline-core">
+              <i className="fa fa-gem"></i> {COMPANY_CONTACT.tagline}
+            </span>
+            <span className="tagline-support hide-on-mobile">
+              • {COMPANY_CONTACT.supportingTagline}
+            </span>
+          </div>
+
+          {/* Supporting Pitch */}
+          <p className="hero-supporting">{t.hero.subheadline}</p>
+
+          {/* Highlight Telugu Quote Box */}
+          <div className="hero-quote-callout">
+            <i className="fa fa-quote-left quote-icon"></i>
+            <div>
+              <p className="quote-text-primary">
+                &ldquo;{COMPANY_CONTACT.teluguPromo1}&rdquo;
+              </p>
+              <p className="quote-text-secondary">
+                {COMPANY_CONTACT.teluguPromo4}
+              </p>
+            </div>
+          </div>
+
+          {/* CTAs Group */}
           <div className="hero-cta-group">
             <button
               className="btn btn-primary open-consultation-btn"
               id="hero-btn-consultation"
-              onClick={() => onOpenConsultation('Full Project Enquiry')}
+              onClick={() => onOpenConsultation('Full Project Consultation')}
             >
-              <i className="fa fa-clipboard-list"></i> GET FREE CONSULTATION
+              <i className="fa fa-clipboard-list"></i> {t.hero.ctaConsultation}
             </button>
             <a
               href="#projects"
@@ -67,91 +132,162 @@ export const HeroSection: React.FC<HeroProps> = ({ onOpenConsultation }) => {
               id="hero-btn-projects"
               onClick={scrollToProjects}
             >
-              <i className="fa fa-building"></i> VIEW OUR PROJECTS
+              <i className="fa fa-building"></i> {t.hero.ctaProjects}
+            </a>
+            <a
+              href={`tel:${COMPANY_CONTACT.phoneRaw}`}
+              className="btn btn-outline-gold hero-call-direct-btn"
+              id="hero-btn-call"
+            >
+              <i className="fa fa-phone-alt"></i> {COMPANY_CONTACT.phone}
             </a>
           </div>
+
+          {/* Trust Highlights Badges */}
           <div className="hero-trust-badges">
             <div className="trust-item">
-              <i className="fa fa-shield-alt"></i>
-              <span>15-Year Structural Warranty</span>
+              <i className="fa fa-award"></i>
+              <span>{t.hero.trustYears}</span>
             </div>
             <div className="trust-item">
-              <i className="fa fa-tint-slash"></i>
-              <span>5-Year Leakage Guarantee</span>
+              <i className="fa fa-hammer"></i>
+              <span>{t.hero.trustFinishing}</span>
             </div>
             <div className="trust-item">
-              <i className="fa fa-compass"></i>
-              <span>100% Vasthu Compliant</span>
+              <i className="fa fa-hand-holding-heart"></i>
+              <span>{t.hero.trustChoice}</span>
             </div>
             <div className="trust-item">
-              <i className="fa fa-handshake"></i>
-              <span>Escrow Milestone Payments</span>
+              <i className="fa fa-layer-group"></i>
+              <span>{t.hero.trustMaterials}</span>
             </div>
           </div>
         </div>
 
-        {/* Quick Interactive Estimator Preview Widget in Hero */}
+        {/* Right Column: High-Converting Quick Consultation Form Card */}
         <div className="hero-card">
           <div className="hero-card-header">
-            <h3 className="hero-card-title">
-              <i className="fa fa-calculator"></i> Quick Cost Estimator
-            </h3>
-            <p className="hero-card-subtitle">
-              Get an instant preliminary estimate for your plot in Vijayawada region
-            </p>
-          </div>
-          <form className="quick-calc-form" onSubmit={(e) => e.preventDefault()}>
-            <div className="form-group">
-              <label htmlFor="hero-calc-type">Project Type</label>
-              <select
-                id="hero-calc-type"
-                value={calcType}
-                onChange={(e) => setCalcType(e.target.value as 'residential' | 'commercial' | 'renovation')}
-              >
-                <option value="residential">Residential House / Villa</option>
-                <option value="commercial">Commercial Complex / Office</option>
-                <option value="renovation">Building Renovation &amp; Remodel</option>
-              </select>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <div className="hero-card-logo-mini">
+                <img src="/logo.png" alt="SS Logo" />
+              </div>
+              <div>
+                <h3 className="hero-card-title">
+                  <i className="fa fa-calendar-check"></i> {t.hero.cardTitle}
+                </h3>
+                <p className="hero-card-subtitle">{t.hero.cardSubtitle}</p>
+              </div>
             </div>
+          </div>
+
+          <form className="quick-calc-form" onSubmit={handleQuickSubmit}>
             <div className="form-group">
-              <label htmlFor="hero-calc-area">Plot / Built-up Area (Sq.Ft)</label>
+              <label htmlFor="hero-name">{t.hero.nameLabel}</label>
               <input
-                type="number"
-                id="hero-calc-area"
-                value={calcArea}
-                min={500}
-                max={25000}
-                step={100}
-                onChange={(e) => setCalcArea(parseFloat(e.target.value) || 1500)}
+                type="text"
+                id="hero-name"
+                required
+                placeholder={isTe ? 'శ్రీ కె. వి. శర్మ' : 'Sri K. V. Sharma'}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
               />
             </div>
+
             <div className="form-group">
-              <label htmlFor="hero-calc-quality">Construction Quality</label>
+              <label htmlFor="hero-phone">{t.hero.phoneLabel}</label>
+              <input
+                type="tel"
+                id="hero-phone"
+                required
+                placeholder="+91 94945 02777"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="hero-project-type">{t.hero.serviceLabel}</label>
               <select
-                id="hero-calc-quality"
-                value={calcQuality}
-                onChange={(e) => setCalcQuality(e.target.value)}
+                id="hero-project-type"
+                value={projectType}
+                onChange={(e) => setProjectType(e.target.value)}
               >
-                <option value="basic">Basic Package (₹1,650/sq.ft)</option>
-                <option value="standard">Standard Package (₹1,950/sq.ft)</option>
-                <option value="premium">Premium Package (₹2,400/sq.ft)</option>
-                <option value="luxury">Ultra Luxury (₹2,900/sq.ft)</option>
+                {ALL_SERVICES.map((s) => (
+                  <option key={s.id} value={s.titleEn}>
+                    {isTe ? s.titleTe : s.titleEn}
+                  </option>
+                ))}
               </select>
             </div>
-            <div className="quick-result">
-              <span className="quick-result-label">Approximate Budget:</span>
-              <span className="quick-result-val" id="hero-calc-val">
-                {estimatedVal}
-              </span>
+
+            <div className="form-group">
+              <label htmlFor="hero-location">{t.hero.locationLabel}</label>
+              <input
+                type="text"
+                id="hero-location"
+                placeholder={isTe ? 'ఉదా: కరెన్సీ నగర్, రామవరప్పాడు, పోరంకి' : 'e.g. Currency Nagar, Ramavarappadu, Poranki'}
+                value={location}
+                onChange={(e) => setLocation(e.target.value)}
+              />
             </div>
-            <a
-              href="#estimate"
-              className="btn btn-outline-gold btn-block btn-sm"
-              onClick={scrollToEstimate}
+
+            <button
+              type="submit"
+              className="btn btn-primary btn-block btn-sm"
+              id="hero-btn-submit-quick"
+              disabled={loading}
+              style={{ marginTop: '16px' }}
             >
-              <i className="fa fa-sliders-h"></i> OPEN DETAILED CALCULATOR
-            </a>
+              {loading ? (
+                <>
+                  <i className="fa fa-spinner fa-spin"></i> Submitting...
+                </>
+              ) : (
+                <>
+                  <i className="fa fa-paper-plane"></i> {t.hero.submitBtn}
+                </>
+              )}
+            </button>
+
+            {statusMsg && (
+              <div
+                className={`form-feedback ${statusMsg.type}`}
+                style={{
+                  display: 'block',
+                  marginTop: '12px',
+                  fontSize: '0.85rem',
+                  padding: '10px 14px',
+                  borderRadius: '6px',
+                  background:
+                    statusMsg.type === 'success'
+                      ? 'rgba(16, 185, 129, 0.18)'
+                      : 'rgba(239, 68, 68, 0.18)',
+                  border: `1px solid ${
+                    statusMsg.type === 'success' ? '#10b981' : '#ef4444'
+                  }`,
+                  color: statusMsg.type === 'success' ? '#6ee7b7' : '#fca5a5',
+                  lineHeight: 1.4,
+                }}
+              >
+                {statusMsg.text}
+              </div>
+            )}
           </form>
+
+          {/* Direct WhatsApp Prompt in Hero Card */}
+          <div className="hero-card-footer-direct">
+            <span style={{ fontSize: '0.8rem', color: '#94a3b8' }}>
+              Prefer instant chat?
+            </span>
+            <a
+              href={COMPANY_CONTACT.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hero-card-wa-link"
+            >
+              <i className="fab fa-whatsapp"></i> Chat on WhatsApp (9494502777)
+            </a>
+          </div>
         </div>
       </div>
     </section>

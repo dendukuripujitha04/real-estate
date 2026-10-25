@@ -1,18 +1,19 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { COMPANY_CONTACT } from '@/constants';
 
 interface SplashScreenProps {
-  durationMs?: number; // default 4000ms
+  durationMs?: number; // default 3000ms
   onComplete?: () => void;
 }
 
 export const SplashScreen: React.FC<SplashScreenProps> = ({
-  durationMs = 4000,
+  durationMs = 2800,
   onComplete,
 }) => {
   const [progress, setProgress] = useState(0);
-  const [statusText, setStatusText] = useState('Initializing Engineering Engine...');
+  const [statusText, setStatusText] = useState('Initializing SS Global Showcase...');
   const [isClosing, setIsClosing] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
 
@@ -22,7 +23,7 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({
     document.body.style.overflow = 'hidden';
 
     const startTime = Date.now();
-    const intervalTime = 30; // ~33fps smooth progress
+    const intervalTime = 30;
 
     const timer = setInterval(() => {
       const elapsed = Date.now() - startTime;
@@ -30,16 +31,14 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({
 
       setProgress(currentPercent);
 
-      if (currentPercent < 25) {
-        setStatusText('Initializing Engineering Engine...');
-      } else if (currentPercent < 55) {
-        setStatusText('Loading Architectural Blueprints & Models...');
-      } else if (currentPercent < 85) {
-        setStatusText('Calibrating Structural Integrity & Standards...');
-      } else if (currentPercent < 100) {
-        setStatusText('Preparing Experience...');
+      if (currentPercent < 30) {
+        setStatusText('Loading SS Global Architectural Showcase...');
+      } else if (currentPercent < 60) {
+        setStatusText('Preparing Construction & Interior Engineering...');
+      } else if (currentPercent < 90) {
+        setStatusText('From Foundation to Finishing • Choice Is Yours...');
       } else {
-        setStatusText('Welcome to BuildSphere');
+        setStatusText('Welcome to SS Global Constructions');
       }
 
       if (elapsed >= durationMs) {
@@ -69,7 +68,7 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({
       setIsDismissed(true);
       document.body.style.overflow = '';
       if (onComplete) onComplete();
-    }, 600); // 600ms matches exit CSS transition
+    }, 500);
   };
 
   if (isDismissed) return null;
@@ -77,7 +76,7 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({
   return (
     <div
       className={`splash-overlay ${isClosing ? 'splash-closing' : ''}`}
-      aria-label="BuildSphere Loading Screen"
+      aria-label="SS Global Constructions Loading Screen"
       role="dialog"
       aria-modal="true"
     >
@@ -97,23 +96,26 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({
 
       {/* Main Content */}
       <div className="splash-content">
-        {/* Emblem with Logo and Concentric Compass Rings */}
+        {/* Emblem with SS Logo */}
         <div className="splash-emblem-wrapper">
           <div className="splash-ring-outer" />
           <div className="splash-ring-inner" />
           <div className="splash-logo-card">
             <img
-              src="/images/logo.png"
-              alt="BuildSphere SS Engineering Logo"
+              src="/logo.png"
+              alt="SS Global Constructions and Interior Works Logo"
               className="splash-logo-img"
             />
           </div>
         </div>
 
         {/* Brand Titles */}
-        <h1 className="splash-brand-title">BuildSphere</h1>
-        <div className="splash-brand-sub">Infra &amp; Engineering Works</div>
-        <p className="splash-motto">&quot;Listen Better • Plan Better • Build Better&quot;</p>
+        <h1 className="splash-brand-title">SS GLOBAL</h1>
+        <div className="splash-brand-sub">Constructions &amp; Interior Works</div>
+        <p className="splash-motto">&quot;{COMPANY_CONTACT.tagline}&quot;</p>
+        <p style={{ fontSize: '0.8rem', color: 'var(--accent-gold)', marginTop: '4px', letterSpacing: '1px' }}>
+          20+ YEARS EXPERIENCE • VIJAYAWADA
+        </p>
 
         {/* Dynamic Progress Laser Bar */}
         <div className="splash-progress-wrapper">

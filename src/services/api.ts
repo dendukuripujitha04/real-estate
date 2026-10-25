@@ -62,7 +62,7 @@ export async function submitEnquiryApi(data: Partial<Enquiry>): Promise<{ succes
   return res.json();
 }
 
-export async function postAiChatApi(message: string): Promise<{ reply: string; suggestedActions?: Array<{ text: string; action: 'scroll_estimate' | 'open_consultation' | 'call_phone' }> }> {
+export async function postAiChatApi(message: string): Promise<{ reply: string; suggestedActions?: Array<{ text: string; action: 'scroll_projects' | 'open_consultation' | 'call_phone' }> }> {
   const res = await fetch('/api/ai-chat', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },

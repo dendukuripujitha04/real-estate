@@ -1,23 +1,22 @@
 {
   "company": {
-    "name": "BuildSphere Infra & Engineering Works",
-    "shortName": "BuildSphere",
-    "tagline": "Building Your Dreams with Quality & Trust",
-    "established": 2004,
+    "name": "SS Global Constructions and Interior Works",
+    "shortName": "SS Global",
+    "tagline": "Trusted | Quality | Stability Through Experience",
+    "supportingTagline": "Specialists in All Constructions & Interior Works",
+    "promotionalMessaging": "From Foundation to Finishing • Choice Is Yours...",
+    "teluguHeadline": "మీ పాత ఇంటిని కానీ, ఫ్లాట్‌ని కానీ మరింత అందంగా మార్చుకోవాలని చూస్తున్నారా...",
     "experienceYears": 20,
-    "founder": "S. Suresh Chandra & Engineering Council",
     "phones": [
-      "+91 81795 17373",
-      "+91 96760 18666",
-      "+91 70757 37548"
+      "9494502777"
     ],
-    "primaryPhone": "+918179517373",
-    "whatsappPhone": "918179517373",
-    "email": "contact@buildsphere.in",
-    "altEmail": "buildsphere2004@gmail.com",
+    "primaryPhone": "9494502777",
+    "whatsappPhone": "919494502777",
+    "email": "contact@ssglobalcsis.in",
+    "website": "www.ssglobalcsis.in",
     "address": {
-      "street": "Door No. 6-13, Kaveti Vari Street, Ring Road (Near M Convention)",
-      "area": "Ramavarapadu",
+      "street": "Door No. 6-6, Srinivasa Nilayam, Currency Nagar Road, Kaveti Vari Street, Near Ramavarappadu Ring",
+      "area": "Currency Nagar / Ramavarappadu",
       "city": "Vijayawada",
       "state": "Andhra Pradesh",
       "pincode": "521108",
@@ -31,16 +30,10 @@
       "Vijayawada",
       "Amaravati",
       "Guntur",
-      "N.T.R. District",
       "Krishna District",
-      "East & West Godavari Districts"
+      "Andhra Pradesh"
     ],
-    "guarantees": {
-      "structuralWarranty": "15-Year Structural Warranty",
-      "leakageGuarantee": "5-Year Leakage / Waterproofing Guarantee",
-      "model": "Milestone-Based Escrow Track & Transact Model"
-    },
-    "philosophy": "Listen Better — Plan Better — Build Better"
+    "philosophy": "Choice Is Yours... From Foundation to Finishing with Quality & Stability"
   },
   "stats": [
     {
@@ -657,6 +650,89 @@
       "estimatedCost": "₹1.4 - ₹1.7 Crores",
       "status": "CONTACTED",
       "createdAt": "2026-10-23T16:30:00.000Z"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "gal-poster-villa",
+      "title": "20 Years Experience & Trust Villa Poster",
+      "titleTe": "20 సంవత్సరాల నమ్మకం & అనుభవం - లగ్జరీ విల్లా పోస్టర్",
+      "category": "posters",
+      "image": "/images/gallery/ss-brand-poster-villa.jpg",
+      "badge": "Official Poster",
+      "caption": "20 Years Experience & Trust • Luxury Villa Construction with UltraTech, Asian Paints, JSW Cement & Tata Tiscon • Call 94945 02777 • Vijayawada"
+    },
+    {
+      "id": "gal-office-flex",
+      "title": "SS Global Official Office Banner & Location",
+      "titleTe": "SS గ్లోబల్ అధికారిక కార్యాలయ ఫ్లెక్స్ బ్యానర్",
+      "category": "posters",
+      "image": "/images/gallery/ss-office-flex-banner.jpg",
+      "badge": "Office Identity",
+      "caption": "Official Office Flex • Door No. 6-6, Srinivasa Nilayam, Currency Nagar Road, Kaveti Vari Street, Near Ramavarappadu Ring, Vijayawada – 521108"
+    },
+    {
+      "id": "gal-poster-renovation",
+      "title": "Complete House & Renovation Services Poster",
+      "titleTe": "ఇంటిని అందంగా తీర్చిదిద్దే సంపూర్ణ రినోవేషన్ సేవల పోస్టర్",
+      "category": "posters",
+      "image": "/images/gallery/ss-renovation-services-poster.jpg",
+      "badge": "Official Poster",
+      "caption": "మీ పాత ఇంటిని లేదా ఫ్లాట్‌ని మరింత అందంగా మార్చుకోండి • Kitchen, Bathroom, Waterproofing, Tile Laying & Plumbing • Contact 94945 02777"
+    },
+    {
+      "id": "gal-official-banner",
+      "title": "SS Constructions & Interior Works - Official Brand",
+      "titleTe": "తరాలు మారినా తరగని బలం... SS కన్‌స్ట్రక్షన్స్ అఫీషియల్ బ్యానర్",
+      "category": "posters",
+      "image": "/images/gallery/ss-official-banner-card.jpg",
+      "badge": "Brand Identity",
+      "caption": "SS Constructions & Interior Works • 20 Years+ • Mobile: 9494502777 • www.ssglobalcsis.in • Vijayawada, Andhra Pradesh"
+    },
+    {
+      "id": "gal-residential-villa",
+      "title": "Contemporary Luxury Villa Elevation",
+      "titleTe": "ఆధునిక లగ్జరీ విల్లా ఎలివేషన్ - పోరంకి, విజయవాడ",
+      "category": "residential",
+      "image": "/images/residential.jpg",
+      "badge": "Luxury Villa",
+      "caption": "Triplex Contemporary Luxury Villa Elevation with Teak Wood Frames & Toughened Glass Balconies • Poranki, Vijayawada"
+    },
+    {
+      "id": "gal-commercial-arcade",
+      "title": "SS Global Commercial Arcade Complex",
+      "titleTe": "కమర్షియల్ కాంప్లెక్స్ నిర్మాణం - రామవరప్పాడు రింగ్",
+      "category": "commercial",
+      "image": "/images/commercial.jpg",
+      "badge": "Commercial",
+      "caption": "Multi-Story Commercial Retail & Office Arcade with High Structural Load Capacity • Near Ramavarappadu Ring, Vijayawada"
+    },
+    {
+      "id": "gal-interior-living",
+      "title": "Grand Living Hall & Designer False Ceiling",
+      "titleTe": "గ్రాండ్ లివింగ్ రూమ్ ఇంటీరియర్స్ & ఫాల్స్ సీలింగ్",
+      "category": "interiors",
+      "image": "/images/interior.jpg",
+      "badge": "Interior Design",
+      "caption": "Turnkey Luxury Living Hall with Italian Vitrified Tiles, Custom TV Unit & Concealed Ambient Warm Lighting"
+    },
+    {
+      "id": "gal-structural-work",
+      "title": "Structural Column & Slab Reinforcement Inspection",
+      "titleTe": "భూకంప నిరోధక పిల్లర్లు మరియు స్లాబ్ రీన్‌ఫోర్స్‌మెంట్ పర్యవేక్షణ",
+      "category": "construction",
+      "image": "/images/structural.jpg",
+      "badge": "Structural Quality",
+      "caption": "Heavy Column-Beam Grid & High-Grade Concrete (M25/M30) Quality Inspection with Certified Civil Engineers"
+    },
+    {
+      "id": "gal-architecture-blueprint",
+      "title": "2D Floor Plan & 3D Vasthu Exterior Elevation",
+      "titleTe": "100% వాస్తు ప్రకారమైన ఆర్కిటెక్చరల్ 2D/3D డ్రాయింగ్స్",
+      "category": "architecture",
+      "image": "/images/architecture.jpg",
+      "badge": "Vasthu Planning",
+      "caption": "Scientific Vasthu Compliant Spatial Planning & High-Resolution 3D Exterior Elevation Renderings"
     }
   ],
   "admin": {

@@ -76,6 +76,8 @@ export interface GalleryItem {
   category: string;
   image: string;
   caption: string;
+  titleTe?: string;
+  badge?: string;
 }
 
 export interface TestimonialItem {
@@ -186,6 +188,6 @@ export interface AiChatMessage {
   text: string;
   actions?: Array<{
     text: string;
-    action: 'scroll_estimate' | 'open_consultation' | 'call_phone';
+    action: 'scroll_projects' | 'open_consultation' | 'call_phone';
   }>;
 }

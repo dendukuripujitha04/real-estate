@@ -3,6 +3,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { postAiChatApi } from '@/services/api';
 import { AiChatMessage } from '@/types';
+import { COMPANY_CONTACT } from '@/constants';
 
 interface AiAssistantProps {
   isOpen: boolean;
@@ -18,7 +19,7 @@ export const AiAssistant: React.FC<AiAssistantProps> = ({
   const [messages, setMessages] = useState<AiChatMessage[]>([
     {
       sender: 'bot',
-      text: 'Namaste! I am the BuildSphere Engineering Assistant. How can I assist you with your construction or architectural project?',
+      text: 'Namaste! Welcome to SS Global Constructions and Interior Works. How can I assist you with your construction, villa, or interior project in Vijayawada?',
     },
   ]);
   const [input, setInput] = useState('');
@@ -37,15 +38,15 @@ export const AiAssistant: React.FC<AiAssistantProps> = ({
   }, [messages, loading]);
 
   const handleAction = (action: string) => {
-    if (action === 'scroll_estimate') {
+    if (action === 'scroll_projects') {
       onClose();
-      const el = document.getElementById('estimate');
+      const el = document.getElementById('projects');
       if (el) el.scrollIntoView({ behavior: 'smooth' });
     } else if (action === 'open_consultation') {
       onClose();
       onOpenConsultation('AI Assistant Consultation');
     } else if (action === 'call_phone') {
-      window.location.href = 'tel:+918179517373';
+      window.location.href = `tel:${COMPANY_CONTACT.phoneRaw}`;
     }
   };
 
@@ -63,7 +64,7 @@ export const AiAssistant: React.FC<AiAssistantProps> = ({
         ...prev,
         {
           sender: 'bot',
-          text: data.reply || 'Thank you for reaching out to BuildSphere.',
+          text: data.reply || 'Thank you for reaching out to SS Global Constructions.',
           actions: data.suggestedActions,
         },
       ]);
@@ -72,7 +73,7 @@ export const AiAssistant: React.FC<AiAssistantProps> = ({
         ...prev,
         {
           sender: 'bot',
-          text: 'For direct civil and structural guidance, please call our engineering team at +91 81795 17373 or visit our office in Ramavarapadu, Vijayawada.',
+          text: `For direct civil and interior guidance, please call our Vijayawada office directly at ${COMPANY_CONTACT.phone}.`,
         },
       ]);
     } finally {
@@ -89,15 +90,15 @@ export const AiAssistant: React.FC<AiAssistantProps> = ({
   if (!isOpen) return null;
 
   return (
-    <div className={`ai-chat-window open`} id="ai-chat-window">
+    <div className="ai-chat-window open" id="ai-chat-window">
       <div className="ai-header">
         <div className="ai-title-row">
           <div className="ai-avatar">
-            <i className="fa fa-robot"></i>
+            <img src="/logo.png" alt="SS Logo" style={{ width: '28px', height: '28px', borderRadius: '50%' }} />
           </div>
           <div>
-            <div className="ai-name">BuildSphere AI</div>
-            <div className="ai-status">Online • Engineering Desk</div>
+            <div className="ai-name">SS Global Assistant</div>
+            <div className="ai-status">Online • Vijayawada Desk</div>
           </div>
         </div>
         <button
@@ -119,27 +120,27 @@ export const AiAssistant: React.FC<AiAssistantProps> = ({
               <div className="ai-quick-pills">
                 <button
                   className="ai-pill"
-                  onClick={() => handleSend('What is the construction cost per sq.ft?')}
+                  onClick={() => handleSend('What services do you provide?')}
                 >
-                  Cost per sq.ft?
+                  Our Services
                 </button>
                 <button
                   className="ai-pill"
-                  onClick={() => handleSend('Tell me about your 15-Year warranty')}
+                  onClick={() => handleSend('Tell me about your 20+ years experience')}
                 >
-                  15-Yr Warranty
+                  20+ Yrs Experience
                 </button>
                 <button
                   className="ai-pill"
-                  onClick={() => handleSend('How does the milestone escrow model work?')}
+                  onClick={() => handleSend('What brands of cement and steel do you use?')}
                 >
-                  Escrow Process
+                  Brands Used
                 </button>
                 <button
                   className="ai-pill"
                   onClick={() => handleSend('Where is your office in Vijayawada?')}
                 >
-                  Office Location
+                  Office Address
                 </button>
               </div>
             )}
@@ -162,7 +163,7 @@ export const AiAssistant: React.FC<AiAssistantProps> = ({
 
         {loading && (
           <div className="ai-msg bot" id="ai-typing-indicator">
-            <em>Consulting BuildSphere engineering knowledge base...</em>
+            <em>Consulting SS Global engineering knowledge base...</em>
           </div>
         )}
         <div ref={messagesEndRef} />
@@ -173,7 +174,7 @@ export const AiAssistant: React.FC<AiAssistantProps> = ({
           ref={inputRef}
           type="text"
           id="ai-user-input"
-          placeholder="Ask about costs, process, Vasthu, etc..."
+          placeholder="Ask about construction, interiors, Vasthu, etc..."
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={handleKeyDown}

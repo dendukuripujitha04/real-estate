@@ -1,29 +1,54 @@
+'use client';
+
 import React from 'react';
+import { useLanguage } from '@/context/language-context';
 
 export const StatsSection: React.FC = () => {
+  const { language } = useLanguage();
+  const isTe = language === 'te';
+
   return (
     <section className="stats-section">
       <div className="container">
         <div className="stats-grid">
           <div className="stat-card">
             <div className="stat-number">20+</div>
-            <div className="stat-label">YEARS EXPERIENCE</div>
-            <div className="stat-subtext">Delivering Excellence Since 2004</div>
+            <div className="stat-label">
+              {isTe ? 'సంవత్సరాల అనుభవం' : 'YEARS EXPERIENCE'}
+            </div>
+            <div className="stat-subtext">
+              {isTe ? 'విజయవాడ & పరిసర ప్రాంతాలలో' : 'Practical Knowledge & Stability'}
+            </div>
           </div>
-          <div className="stat-card">
-            <div className="stat-number">350+</div>
-            <div className="stat-label">PROJECTS DELIVERED</div>
-            <div className="stat-subtext">Residential &amp; Commercial Complexes</div>
-          </div>
-          <div className="stat-card">
-            <div className="stat-number">15 YRS</div>
-            <div className="stat-label">STRUCTURAL WARRANTY</div>
-            <div className="stat-subtext">BuildSphere Engineering Assurance</div>
-          </div>
+
           <div className="stat-card">
             <div className="stat-number">100%</div>
-            <div className="stat-label">TRANSPARENT PRICING</div>
-            <div className="stat-subtext">Zero Hidden Costs • Milestone Escrow</div>
+            <div className="stat-label">
+              {isTe ? 'పునాది నుండి ఫినిషింగ్ వరకు' : 'FOUNDATION TO FINISHING'}
+            </div>
+            <div className="stat-subtext">
+              {isTe ? 'సివిల్, టైలింగ్ & ఇంటీరియర్ పూర్తి బాధ్యత' : 'End-to-End Single Window Control'}
+            </div>
+          </div>
+
+          <div className="stat-card">
+            <div className="stat-number">15</div>
+            <div className="stat-label">
+              {isTe ? 'ప్రత్యేక నిర్మాణాలు & సేవలు' : 'SPECIALIZED SERVICES'}
+            </div>
+            <div className="stat-subtext">
+              {isTe ? 'ఇళ్లు, విల్లాలు, కిచెన్ & రినోవేషన్స్' : 'Villas, Interiors, Remodeling & Civil'}
+            </div>
+          </div>
+
+          <div className="stat-card">
+            <div className="stat-number">100%</div>
+            <div className="stat-label">
+              {isTe ? 'వాస్తు అనుకూల ప్రణాళిక' : 'VASTHU COMPLIANT DESIGNS'}
+            </div>
+            <div className="stat-subtext">
+              {isTe ? 'సహజ వెలుతురు & గాలి ప్రసరణ' : 'Harmonious Spaces & Airflow'}
+            </div>
           </div>
         </div>
       </div>

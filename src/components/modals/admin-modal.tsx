@@ -9,8 +9,6 @@ import {
   adminGetEnquiriesApi,
   adminUpdateEnquiryStatusApi,
   adminDeleteEnquiryApi,
-  fetchEstimatorRates,
-  adminUpdateRatesApi,
 } from '@/services/api';
 import { Enquiry } from '@/types';
 import { formatDate } from '@/utils/format-date';
@@ -22,7 +20,7 @@ interface AdminModalProps {
 
 export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
   const [token, setToken] = useState<string>('');
-  const [activeTab, setActiveTab] = useState<'overview' | 'enquiries' | 'rates'>('overview');
+  const [activeTab, setActiveTab] = useState<'overview' | 'enquiries'>('overview');
   const [metrics, setMetrics] = useState({
     totalEnquiries: 0,
     newEnquiries: 0,
@@ -30,14 +28,6 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
     totalProjects: 6,
   });
   const [enquiries, setEnquiries] = useState<Enquiry[]>([]);
-  const [ratesForm, setRatesForm] = useState({
-    resBasic: 1650,
-    resStd: 1950,
-    resPrem: 2400,
-    comStd: 2200,
-    renStd: 1250,
-  });
-  const [ratesSuccessMsg, setRatesSuccessMsg] = useState(false);
 
   useEffect(() => {
     if (isOpen) {
@@ -65,10 +55,9 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
 
   const loadDashboard = async (authToken: string) => {
     try {
-      const [overviewData, enquiriesData, ratesData] = await Promise.all([
+      const [overviewData, enquiriesData] = await Promise.all([
         adminOverviewApi(authToken),
         adminGetEnquiriesApi(authToken),
-        fetchEstimatorRates(),
       ]);
 
       if (overviewData) {
@@ -82,16 +71,6 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
 
       if (Array.isArray(enquiriesData)) {
         setEnquiries(enquiriesData);
-      }
-
-      if (ratesData && ratesData.residential) {
-        setRatesForm({
-          resBasic: ratesData.residential.basic?.rate || 1650,
-          resStd: ratesData.residential.standard?.rate || 1950,
-          resPrem: ratesData.residential.premium?.rate || 2400,
-          comStd: ratesData.commercial?.standard?.rate || 2200,
-          renStd: ratesData.renovation?.standard?.rate || 1250,
-        });
       }
     } catch (err) {
       console.error('Error loading admin dashboard data:', err);
@@ -135,32 +114,6 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
       }
     } catch (err) {
       console.error('Failed to delete enquiry', err);
-    }
-  };
-
-  const handleSaveRates = async () => {
-    const payload = {
-      residential: {
-        basic: { rate: Number(ratesForm.resBasic) },
-        standard: { rate: Number(ratesForm.resStd) },
-        premium: { rate: Number(ratesForm.resPrem) },
-      },
-      commercial: {
-        standard: { rate: Number(ratesForm.comStd) },
-      },
-      renovation: {
-        standard: { rate: Number(ratesForm.renStd) },
-      },
-    };
-
-    try {
-      const res = await adminUpdateRatesApi(payload, token);
-      if (res.success) {
-        setRatesSuccessMsg(true);
-        setTimeout(() => setRatesSuccessMsg(false), 4000);
-      }
-    } catch (err) {
-      console.error('Failed to save rates', err);
     }
   };
 
@@ -218,12 +171,6 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
             >
               Customer Enquiries
             </button>
-            <button
-              className={`admin-tab-btn ${activeTab === 'rates' ? 'active' : ''}`}
-              onClick={() => setActiveTab('rates')}
-            >
-              Estimator Rates
-            </button>
           </div>
 
           {/* Tab: Overview */}
@@ -254,7 +201,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                 </div>
               </div>
               <p style={{ fontSize: '0.85rem', color: '#64748b', lineHeight: 1.6 }}>
-                Welcome to the BuildSphere management system. Here you can monitor project enquiries received from the website, change enquiry status (NEW, CONTACTED, IN PROGRESS, COMPLETED), and update base per sq.ft construction rates for the customer estimator.
+                Welcome to the BuildSphere management system. Here you can monitor project enquiries received from the website and update enquiry status (NEW, CONTACTED, IN PROGRESS, COMPLETED) in real time.
               </p>
             </div>
           )}
@@ -348,87 +295,6 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose }) => {
                   )}
                 </tbody>
               </table>
-            </div>
-          )}
-
-          {/* Tab: Rates */}
-          {activeTab === 'rates' && (
-            <div className="admin-tab-pane" style={{ display: 'block' }}>
-              <h5 style={{ marginBottom: '12px', color: 'var(--primary-navy)' }}>
-                Configure Live Construction Estimator Rates (₹ per Sq.Ft)
-              </h5>
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-                  gap: '16px',
-                  marginBottom: '20px',
-                }}
-              >
-                <div className="form-group">
-                  <label>Residential Basic Rate (₹/sq.ft)</label>
-                  <input
-                    type="number"
-                    value={ratesForm.resBasic}
-                    onChange={(e) =>
-                      setRatesForm({ ...ratesForm, resBasic: Number(e.target.value) })
-                    }
-                  />
-                </div>
-                <div className="form-group">
-                  <label>Residential Standard Rate (₹/sq.ft)</label>
-                  <input
-                    type="number"
-                    value={ratesForm.resStd}
-                    onChange={(e) =>
-                      setRatesForm({ ...ratesForm, resStd: Number(e.target.value) })
-                    }
-                  />
-                </div>
-                <div className="form-group">
-                  <label>Residential Premium Rate (₹/sq.ft)</label>
-                  <input
-                    type="number"
-                    value={ratesForm.resPrem}
-                    onChange={(e) =>
-                      setRatesForm({ ...ratesForm, resPrem: Number(e.target.value) })
-                    }
-                  />
-                </div>
-                <div className="form-group">
-                  <label>Commercial Standard Rate (₹/sq.ft)</label>
-                  <input
-                    type="number"
-                    value={ratesForm.comStd}
-                    onChange={(e) =>
-                      setRatesForm({ ...ratesForm, comStd: Number(e.target.value) })
-                    }
-                  />
-                </div>
-                <div className="form-group">
-                  <label>Renovation Standard Rate (₹/sq.ft)</label>
-                  <input
-                    type="number"
-                    value={ratesForm.renStd}
-                    onChange={(e) =>
-                      setRatesForm({ ...ratesForm, renStd: Number(e.target.value) })
-                    }
-                  />
-                </div>
-              </div>
-
-              <button className="btn btn-primary btn-sm" onClick={handleSaveRates}>
-                <i className="fa fa-save"></i> UPDATE ESTIMATOR RATES
-              </button>
-
-              {ratesSuccessMsg && (
-                <div
-                  className="form-feedback success"
-                  style={{ display: 'block', marginTop: '12px' }}
-                >
-                  BuildSphere estimator rates updated successfully! Changes are live on the customer calculator.
-                </div>
-              )}
             </div>
           )}
         </div>
