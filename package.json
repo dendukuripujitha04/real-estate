@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "server": "node server.js"
+    "start": "next start"
   },
   "dependencies": {
     "@types/node": "^26.6.5",
